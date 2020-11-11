@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/overall/index",
+    "pages/index/index",
     "pages/own/index",
     "pages/ranking/index",
     "pages/integral/index",

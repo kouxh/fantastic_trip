@@ -1,7 +1,7 @@
 <!--pages/overall/index.wxml-->
 <!-- <text>pages/overall/index.wxml</text> -->
   <view class="pages-overall-index">
-    首页
-    <!-- loding动画 -->
-     <loading wx:if="{{loadEnd}}" />
+    <image src="/assets/img/bg.jpg" mode='aspectFill' alt="" class="img"></image>
+    <!-- loding动画
+     <loading wx:if="{{loadEnd}}" /> -->
   </view>

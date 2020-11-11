@@ -1,1 +1,6 @@
 /* pages/overall/index.wxss */
+.img{
+  width: 100%;
+  height: 1200rpx;
+  object-fit: cover;
+}
