@@ -1,0 +1,12 @@
+<wxs src="../../utils/utils.wxs" module="util" />
+<view class="pages-success-index">
+<image src="{{util.setImgUrl}}/assets/img/success-bg.jpg" mode='aspectFill' alt="" class="img"></image>
+  <view class="back-btn" bindtap="backFn">
+		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
+	</view> 
+  <view class="content-box">
+   <view class="text">意见或建议已成功传达 </view> 
+   <view class="text">元年的成长之路，</view> 
+   <view class="text">幸有你的相伴！</view> 
+  </view>
+</view>

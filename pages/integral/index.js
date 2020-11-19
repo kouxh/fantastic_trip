@@ -14,6 +14,12 @@ Page({
   onLoad: function (options) {
 
   },
+  //点击返回按钮
+  backFn(){
+    wx.switchTab({
+      url: '/pages/overall/index',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

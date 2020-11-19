@@ -1,1 +1,2 @@
 /* pages/ranking/index.wxss */
+@import "../integral/index.wxss";

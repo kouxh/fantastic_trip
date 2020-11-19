@@ -10,10 +10,10 @@ module.exports = {
     getConfig() {
       if (this.isRelease()) {
         //正式
-        return "https://www.chinamas.cn/";
+        return "https://march.yuanian.com";
       } else {
         //测试
-        return "http://test.chinamas.cn/";
+        return "https://march.yuanian.com";
       }
     },
   

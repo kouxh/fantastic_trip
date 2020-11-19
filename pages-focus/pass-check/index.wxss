@@ -1,0 +1,43 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.pages-pass-check-index {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.back-btn{
+  width: 137rpx;
+	height: 56rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+}
+.next-content{
+  width: 177rpx;
+  height: 111rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #3a3a3a;
+  position: absolute;
+  top: 840rpx;
+  right: 175rpx;
+
+}
+.next{
+  font-family: PingFangSC-Medium;
+	font-size: 26rpx;
+  color: #ff58be;
+  width: 80rpx;
+	height: 3rpx;
+	border-bottom: dashed 2rpx #ff58be;
+}

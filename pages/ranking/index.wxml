@@ -1,2 +1,9 @@
 
-<view class="pages-ranking-index">排行榜</view>
+<wxs src="../../utils/utils.wxs" module="util" />
+<view class="pages-integral-index">
+  <image src="{{util.setImgUrl}}/assets/img/ranking-bg.jpg" mode='aspectFill' alt="" class="img"></image>
+	<view  class="back-btn" bindtap="backFn">
+		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
+	</view>
+</view>
+

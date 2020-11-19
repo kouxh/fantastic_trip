@@ -6,39 +6,71 @@ Page({
    */
   data: {
     loadEnd: false,
+    isDoudong: true, //控制图片抖动
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({
-      title: "加载中...",
-      mask: true
-    });
+    let that = this;
+    //抖动相关的
+    // setInterval(function() {
+      // let isDoudong = that.data.isDoudong
+      // setTimeout(function(){
+      //   that.setData({
+      //     isDoudong: false
+      //   })
+      // },1000)
+     
+    // }, 1000)
+    // wx.showLoading({
+    //   title: "加载中...",
+    //   mask: true
+    // });
     
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 2000)
+    // setTimeout(function () {
+    //   wx.hideLoading()
+    // }, 2000)
   },
-
+  // 点击待开拓站点
+  developFn(){
+    console.log('蒙层----')
+    wx.navigateTo({
+      url: '/pages-focus/develop/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+   
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-        this.getTabBar()) {
-        this.getTabBar().setData({
-          selected: 0
+    // if (typeof this.getTabBar === 'function' &&
+    //     this.getTabBar()) {
+    //     this.getTabBar().setData({
+    //       selected: 0
+    //     })
+    //   }
+      let that = this;
+      //抖动相关的
+      // setInterval(function() {
+        // let isDoudong = that.data.isDoudong
+        setTimeout(function(){
+          that.setData({
+            isDoudong: false
+          })
+          console.log(that.data.isDoudong,'---------------')
+        },1000)
+        that.setData({
+          isDoudong: true
         })
-      }
+
   },
 
   /**

@@ -26,44 +26,44 @@ App({
     })
 
     // 登录
-    wx.qy.login({
-      success: function(res) {
-        console.log(res,'------------')
-        if (res.code) {
-          wx.showToast({
-            title: res.code,
-            icon: "none",
-          })
-          wx.qy.getEnterpriseUserInfo ({
-            success: function(res) {
-              console.log(res,'----------------')
-              var userInfo = res.userInfo
-              var name = userInfo.name
-              var gender = userInfo.gender //性别 0：未知、1：男、2：女
-            }
-          })
-          // 发起网络请求
-          // wx.request({
-          //   url: 'https://test.com/onLogin',
-          //   data: {
-          //     code: res.code
-          //   }
-          // })
-        } else {
-          console.log('登录失败！' + res.errMsg)
-        }
-      }
-    });
-    wx.qy.checkSession({
-      success: function(res){
-        console.log(res,'-------------')
-        //session_key 未过期，并且在本生命周期一直有效
-      },
-      fail: function(res){
-        // session_key 已经失效，需要重新执行登录流程
-        wx.qy.login() //重新登录
-      }
-    });
+    // wx.qy.login({
+    //   success: function(res) {
+    //     console.log(res,'------------')
+    //     if (res.code) {
+    //       wx.showToast({
+    //         title: res.code,
+    //         icon: "none",
+    //       })
+    //       wx.qy.getEnterpriseUserInfo ({
+    //         success: function(res) {
+    //           console.log(res,'----------------')
+    //           var userInfo = res.userInfo
+    //           var name = userInfo.name
+    //           var gender = userInfo.gender //性别 0：未知、1：男、2：女
+    //         }
+    //       })
+    //       // 发起网络请求
+    //       // wx.request({
+    //       //   url: 'https://test.com/onLogin',
+    //       //   data: {
+    //       //     code: res.code
+    //       //   }
+    //       // })
+    //     } else {
+    //       console.log('登录失败！' + res.errMsg)
+    //     }
+    //   }
+    // });
+    // wx.qy.checkSession({
+    //   success: function(res){
+    //     console.log(res,'-------------')
+    //     //session_key 未过期，并且在本生命周期一直有效
+    //   },
+    //   fail: function(res){
+    //     // session_key 已经失效，需要重新执行登录流程
+    //     wx.qy.login() //重新登录
+    //   }
+    // });
     
     // wx.login({
     //   success: res => {

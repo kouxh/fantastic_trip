@@ -1,11 +1,11 @@
-// pages/ranking/index.js
+// pages-focus/develop/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    value:''
   },
 
   /**
@@ -14,13 +14,19 @@ Page({
   onLoad: function (options) {
 
   },
-  //点击返回按钮
-  backFn(){
-    wx.switchTab({
-      url: '/pages/overall/index',
+  // 点击提交按钮
+  submitFn(){
+    // 请求成功接口 成功后跳转
+    wx.navigateTo({
+      url: '/pages-focus/success/index',
     })
   },
-
+  // 评论内容 同步
+  inputValueFn(e) {
+    this.setData({
+      value: e.detail.value,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -32,12 +38,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-        this.getTabBar()) {
-        this.getTabBar().setData({
-          selected: 2
-        })
-      }
+
   },
 
   /**

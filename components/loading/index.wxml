@@ -1,4 +1,0 @@
-<view class="loading-box">
-    <!-- <van-loading size='80rpx' color="#1989fa" /> -->
-    <!-- <van-loading size='80rpx' color="#1989fa" vertical>加载中...</van-loading> -->
-</view>

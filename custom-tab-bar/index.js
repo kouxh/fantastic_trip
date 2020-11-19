@@ -6,26 +6,26 @@ Component({
     list: [
       {
         pagePath: "/pages/overall/index",
-        iconPath: "/assets/img/icon/icon_API.png",
-        selectedIconPath: "/assets/img/icon/icon_API_HL.png",
+        iconPath: "/assets/img/icon/overall.png",
+        selectedIconPath: "/assets/img/icon/overall.png",
         text: "全局"
       },
       {
         pagePath: "/pages/own/index",
-        iconPath: "/assets/img/icon/icon_component.png",
-        selectedIconPath: "/assets/img/icon/icon_component_HL.png",
+        iconPath: "/assets/img/icon/own.png",
+        selectedIconPath: "/assets/img/icon/own.png",
         text: "我的行军图"
       },
       {
         pagePath: "/pages/ranking/index",
-        iconPath: "/assets/img/icon/icon_API.png",
-        selectedIconPath: "/assets/img/icon/icon_API_HL.png",
+        iconPath: "/assets/img/icon/ranking.png",
+        selectedIconPath: "/assets/img/icon/ranking.png",
         text: "排行榜"
       },
       {
         pagePath: "/pages/integral/index",
-        iconPath: "/assets/img/icon/icon_component.png",
-        selectedIconPath: "/assets/img/icon/icon_component_HL.png",
+        iconPath: "/assets/img/icon/integral.png",
+        selectedIconPath: "/assets/img/icon/integral.png",
         text: "积分兑换"
       }
     ]

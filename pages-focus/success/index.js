@@ -1,4 +1,4 @@
-// pages/ranking/index.js
+// pages-focus/success/index.js
 Page({
 
   /**
@@ -7,18 +7,16 @@ Page({
   data: {
 
   },
-
+  backFn(){
+    wx.navigateBack({
+      delta: 2
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
-  },
-  //点击返回按钮
-  backFn(){
-    wx.switchTab({
-      url: '/pages/overall/index',
-    })
   },
 
   /**
@@ -32,26 +30,22 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-        this.getTabBar()) {
-        this.getTabBar().setData({
-          selected: 2
-        })
-      }
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    wx.navigateBack({
+      delta: 2
+    })
   },
 
   /**

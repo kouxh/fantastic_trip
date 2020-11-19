@@ -1,26 +1,35 @@
-// pages/ranking/index.js
-Page({
-
+Component({
   /**
    * 页面的初始数据
    */
   data: {
-
+    changeShow:true,//控制弹出的显示隐藏
+    typeName:'头条号'
   },
+  
 
+  // 生命周期函数
+  ready: function () {
+  
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  methods: {
+    //关闭弹层
+    closeMask(){
+      this.setData({
+        changeShow:false
+      })
+    },
+    //点击去修改跳转
+    changeFn(){
+      wx.redirectTo({
+        url: `/pages-focus/no-concern/index?name=${this.data.typeName}`,
+      })
+      
+    }
   },
-  //点击返回按钮
-  backFn(){
-    wx.switchTab({
-      url: '/pages/overall/index',
-    })
-  },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -32,12 +41,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-        this.getTabBar()) {
-        this.getTabBar().setData({
-          selected: 2
-        })
-      }
+
   },
 
   /**

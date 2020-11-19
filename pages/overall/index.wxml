@@ -1,7 +1,39 @@
-<!--pages/overall/index.wxml-->
-<!-- <text>pages/overall/index.wxml</text> -->
+ <wxs src="../../utils/utils.wxs" module="util" />
   <view class="pages-overall-index">
-    <image src="/assets/img/bg.jpg" mode='aspectFill' alt="" class="img"></image>
-    <!-- loding动画
-     <loading wx:if="{{loadEnd}}" /> -->
+    <image src="{{util.setImgUrl}}/assets/img/overall-bg.jpg" mode='aspectFill' alt="" class="img"></image>
+    <view class="each-icon {{isDoudong?'topImage':''}}">
+      <image src="{{util.setImgUrl}}/assets/img/icon/station.png" mode='aspectFill' alt="" class="img"></image>
+      <view class="num">1831</view>
+      <!-- <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-each-icon"></image> -->
+    </view>
+    <navigator hover-class="none" url='/pages-focus/no-concern/index?name=抖音号' class="trill-icon {{isDoudong?'topImage':''}}">
+      <image src="{{util.setImgUrl}}/assets/img/icon/trill.png" mode='aspectFill' alt="" class="img"></image>
+      <view class="trill-num">868</view>
+      <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+    </navigator>
+    <navigator hover-class="none" url='/pages-focus/no-concern/index?name=头条号' class="headline-icon {{isDoudong?'topImage':''}}">
+      <image src="{{util.setImgUrl}}/assets/img/icon/headline.png" mode='aspectFill' alt="" class="img"></image>
+      <view class="headline-num">868</view>
+      <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+    </navigator>
+    <navigator hover-class="none" url='/pages-focus/no-concern/index?name=知乎号' class="zhihu-icon {{isDoudong?'topImage':''}}">
+      <image src="{{util.setImgUrl}}/assets/img/icon/zhihu.png" mode='aspectFill' alt="" class="img"></image>
+      <view class="zhihu-num">868</view>
+      <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+    </navigator>
+    <navigator hover-class="none" url='/pages-focus/no-concern/index?name=视频号' class="video-icon {{isDoudong?'topImage':''}}">
+      <image src="{{util.setImgUrl}}/assets/img/icon/video.png" mode='aspectFill' alt="" class="img"></image>
+      <view class="video-num">868</view>
+      <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+    </navigator>
+    <navigator hover-class="none" url='/pages-focus/no-concern/index?name=喜马拉雅号' class="himalaya-icon {{isDoudong?'topImage':''}}">
+      <image src="{{util.setImgUrl}}/assets/img/icon/himalaya.png" mode='aspectFill' alt="" class="img"></image>
+      <view class="himalaya-num">868</view>
+      <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+    </navigator>
+    <view class="wait-icon {{isDoudong?'topImage':''}}" catchtap="developFn">
+      <image src="{{util.setImgUrl}}/assets/img/icon/wait.png" mode='aspectFill' alt="" class="img"></image>
+      <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon" ></image>
+    </view>
+
   </view>

@@ -1,4 +1,4 @@
-// pages/ranking/index.js
+// pages/check/index.js
 Page({
 
   /**
@@ -14,13 +14,11 @@ Page({
   onLoad: function (options) {
 
   },
-  //点击返回按钮
-  backFn(){
+  nextFn(){
     wx.switchTab({
-      url: '/pages/overall/index',
+      url: '/pages/own/index',
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -32,12 +30,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-        this.getTabBar()) {
-        this.getTabBar().setData({
-          selected: 2
-        })
-      }
+
   },
 
   /**

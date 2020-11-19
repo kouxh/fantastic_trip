@@ -1,0 +1,8 @@
+// 【 处理图片域名 】
+// function setImgUrl() {
+//    var imgUrl ="https://march.yuanian.com";
+//   return imgUrl;
+// }
+module.exports = {
+  setImgUrl: "https://march.yuanian.com/static",
+};

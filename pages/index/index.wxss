@@ -19,3 +19,58 @@
 .usermotto {
   margin-top: 200px;
 }
+page{
+  background-color: #fff;
+}
+.pages-index{
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+}
+.index-bg{
+  width: 750rpx;
+	height: 1334rpx;
+}
+.index-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.index-btn{
+  width: 353rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  margin-top: -120rpx;
+}
+.index-tip{
+  font-family: PingFangSC-Light;
+	font-size: 18rpx;
+	letter-spacing: 3rpx;
+  color: #939393;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70rpx;
+}
+.topImage{
+  animation: image 1.5s infinite; 
+}
+/* @keyframes image {
+  0% {
+      transform: translate(0px, 0px);
+  }
+  50% {
+      transform: translate(0px, -8px);
+  }
+  100% {
+      transform: translate(0px, 0px);
+  }
+  
+} */
+@keyframes image{
+  0% {transform: scale(1,1);}
+  25% {transform: scale(1.2,1.2);}
+  50% {transform: scale(1,1);}
+  70% {transform: scale(1.2,1.2);}
+  100% {transform: scale(1,1);}
+  }

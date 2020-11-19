@@ -1,1 +1,193 @@
-/* pages/own/index.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.pages-own-index {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: 104%;
+  object-fit: cover;
+}
+
+.each-icon {
+  width: 114rpx;
+  height: 110rpx;
+  position: absolute;
+  top: 415rpx;
+  left: 205rpx;
+  z-index: 99;
+}
+
+.shade-each-icon {
+  width: 88rpx;
+  height: 112rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 15rpx;
+}
+
+
+.trill-icon,
+.headline-icon,
+.zhihu-icon,
+.video-icon,
+.himalaya-icon,
+.wait-icon {
+  width: 72rpx;
+  height: 90rpx;
+  position: absolute;
+  top: 425rpx;
+  right: 258rpx;
+  z-index: 99;
+}
+
+
+.headline-icon {
+  top: 532rpx;
+  left: 328rpx;
+}
+
+.zhihu-icon {
+  top: 624rpx;
+  left: 216rpx;
+
+}
+
+.video-icon {
+  top: 546rpx;
+  right: 182rpx;
+}
+
+.himalaya-icon {
+  top: 692rpx;
+  left: 362rpx;
+}
+
+.wait-icon {
+  top: 764rpx;
+  right: 185rpx;
+}
+
+.shade-icon {
+  width: 72rpx;
+  height: 90rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+}
+
+.integral {
+  position: absolute;
+  top: 1093rpx;
+  font-size: 24rpx;
+  letter-spacing: 0rpx;
+  color: #954b14;
+}
+
+.all-integral {
+  left: 130rpx;
+}
+
+.confirm-integral {
+  left: 280rpx;
+}
+
+.wait-confirm-integral {
+  right: 300rpx;
+}
+
+.exchange-btn {
+  width: 115rpx;
+  height: 115rpx;
+  position: absolute;
+  top: 1036rpx;
+  right: 70rpx;
+}
+
+.topImage {
+  animation: image 1.5s infinite;
+}
+
+@keyframes image {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, -8px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+
+}
+
+/* @keyframes image{
+  0% {transform: scale(1.4,1.4);}
+  10% {transform: scale(1,1);}
+  25% {transform: scale(1.2,1.2);}
+  50% {transform: scale(1,1);}
+  70% {transform: scale(1.2,1.2);}
+  100% {transform: scale(1,1);}
+  } */
+
+
+.line-img {
+  width: 80rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 468rpx;
+  left: 280rpx;
+}
+
+.line1-img {
+  width: 80rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 460rpx;
+  left: 390rpx;
+
+}
+
+.line2-img {
+  width: 80rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 468rpx;
+  right: 224rpx;
+
+}
+
+.line3-img {
+  width: 260rpx;
+  height: 38rpx;
+  position: absolute;
+  top: 625rpx;
+  left: 269rpx;
+
+}
+
+.line4-img {
+  width: 150rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 643rpx;
+  left: 248rpx;
+
+}
+
+.line5-img {
+  width: 172rpx;
+  height: 95rpx;
+  position: absolute;
+  top: 724rpx;
+  right: 212rpx;
+
+}

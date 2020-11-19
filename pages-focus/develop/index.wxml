@@ -1,0 +1,15 @@
+<wxs src="../../utils/utils.wxs" module="util" />
+<view class="pages-develop-index">
+  <image src="{{util.setImgUrl}}/assets/img/develop-bg.jpg" mode='aspectFill' alt="" class="bg-img"></image>
+  <navigator open-type="navigateBack" hover-class="none" class="back-btn">
+		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
+	</navigator>
+  <view class="title">你对网络营销推广有什么好的意见？
+你还建议入驻哪些平台？</view>
+  <view class="textArea-box">
+    <textarea placeholder=""  value='{{value}}' bindinput='inputValueFn'></textarea>
+  </view>
+  <view class="submit-btn" bindtap="submitFn">
+    <image src="{{util.setImgUrl}}/assets/img/icon/submit1.png" mode='aspectFill' alt="" class="img"></image>
+  </view>
+</view>
