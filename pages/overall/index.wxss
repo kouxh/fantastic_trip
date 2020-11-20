@@ -20,7 +20,7 @@ page {
   width: 140rpx;
   height: 180rpx;
   position: absolute;
-  top: 210rpx;
+  top: 240rpx;
   left: 172rpx;
 }
 .shade-each-icon{
@@ -45,7 +45,7 @@ page {
   width: 80rpx;
   height: 100rpx;
   position: absolute;
-  top: 270rpx;
+  top: 300rpx;
   right: 266rpx;
 }
 
@@ -59,14 +59,14 @@ page {
   left: 30rpx;
 }
 .headline-icon {
-  top: 376rpx;
+  top: 406rpx;
   left: 324rpx;
 }
 .headline-num{
   color: #df6f6d;
 }
 .zhihu-icon{
-  top: 384rpx;
+  top: 414rpx;
   right: 188rpx;
 
 }
@@ -74,21 +74,21 @@ page {
   color: #549ed4;
 }
 .video-icon{
-  top: 468rpx;
+  top: 498rpx;
   left:210rpx;
 }
 .video-num{
   color: #ed8234;
 }
 .himalaya-icon{
-  top: 534rpx;
+  top: 564rpx;
   left: 362rpx;
 }
 .himalaya-num{
   color: #e3514d;
 }
 .wait-icon{
-  top: 620rpx;
+  top: 650rpx;
   right: 200rpx;
 }
 .shade-icon{
@@ -99,7 +99,7 @@ page {
 .topImage{
   animation: image 1.5s 3; 
 }
-@keyframes image {
+/* @keyframes image {
   0% {
       transform: translate(0px, 0px);
   }
@@ -110,12 +110,11 @@ page {
       transform: translate(0px, 0px);
   }
   
-}
-/* @keyframes image{
-  0% {transform: scale(1.4,1.4);}
-  10% {transform: scale(1,1);}
+} */
+@keyframes image{
+  0% {transform: scale(1,1);}
   25% {transform: scale(1.2,1.2);}
   50% {transform: scale(1,1);}
   70% {transform: scale(1.2,1.2);}
   100% {transform: scale(1,1);}
-  } */
+  }

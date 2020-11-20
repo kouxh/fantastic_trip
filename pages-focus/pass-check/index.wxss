@@ -23,13 +23,13 @@ page {
 }
 .next-content{
   width: 177rpx;
-  height: 111rpx;
+  height: 110rpx;
   font-family: PingFangSC-Regular;
   font-size: 24rpx;
   line-height: 40rpx;
   color: #3a3a3a;
   position: absolute;
-  top: 840rpx;
+  top: 910rpx;
   right: 175rpx;
 
 }

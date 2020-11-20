@@ -7,6 +7,7 @@ Page({
   data: {
     loadEnd: false,
     isDoudong: true, //控制图片抖动
+    checkBool:false,//审核失败
   },
 
   /**
@@ -59,14 +60,12 @@ Page({
     //   }
       let that = this;
       //抖动相关的
-      // setInterval(function() {
-        // let isDoudong = that.data.isDoudong
         setTimeout(function(){
           that.setData({
             isDoudong: false
           })
           console.log(that.data.isDoudong,'---------------')
-        },1000)
+        },3000)
         that.setData({
           isDoudong: true
         })

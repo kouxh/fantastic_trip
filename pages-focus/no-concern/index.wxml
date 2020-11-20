@@ -9,7 +9,9 @@
 	<view class="info-box">
 		<view class="name">
 			<view class="circle" style="background:{{circleColor}}"></view>
-			<view class="name-text">{{typeName}}名称：元年科技</view>
+			<view class="name-text" wx:if="{{typeName=='视频号'}}">{{typeName}}名称：元年服务</view>
+			<view class="name-text" wx:else>{{typeName}}名称：元年科技</view>
+			
 		</view>
 		<view class="name">
 			<view class="circle" style="background:{{circleColor}}"></view>
@@ -28,15 +30,14 @@
 		<view wx:if="{{typeName=='头条号'}}">
 			<view class="frame" >
 				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/f0cb72ead6c740c180c1cbc59453f710/%E5%A4%B4%E6%9D%A1%E5%8F%B7%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>
-				<!-- <view class="copy" bindtap="copyFn" data-copy="{{url}}">{{url}}复制</view> -->
 			</view>
-			<view class="step">打开头条app  > 搜索框输入“元年科技”  > 找到元年账号  >  点击“关注”</view>
+			<view class="step">打开今日头条 > 输入：元年科技  > 点击“关注”</view>
 		</view>
 		<view wx:if="{{typeName=='抖音号'}}">
 			<view class="trill" >
 				<view class="copy" bindtap="copyFn" data-copy="{{url}}">
 					<view>{{url}}</view>
-					<image src="{{util.setImgUrl}}/assets/img/icon/submit.png" mode='aspectFill' alt="" class="copy-img"></image>
+					<image src="{{util.setImgUrl}}/assets/img/icon/copy-btn.png" mode='aspectFill' alt="" class="copy-img"></image>
 				</view>
 			</view>
 			<view class="step">点击复制按钮 > 打开抖音app > 点击“关注”</view>

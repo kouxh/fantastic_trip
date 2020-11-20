@@ -9,7 +9,7 @@
     <navigator hover-class="none" url='/pages-focus/no-concern/index?name=抖音号' class="trill-icon {{isDoudong?'topImage':''}}">
       <image src="{{util.setImgUrl}}/assets/img/icon/trill.png" mode='aspectFill' alt="" class="img"></image>
       <view class="trill-num">868</view>
-      <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+      <!-- <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image> -->
     </navigator>
     <navigator hover-class="none" url='/pages-focus/no-concern/index?name=头条号' class="headline-icon {{isDoudong?'topImage':''}}">
       <image src="{{util.setImgUrl}}/assets/img/icon/headline.png" mode='aspectFill' alt="" class="img"></image>
@@ -35,5 +35,6 @@
       <image src="{{util.setImgUrl}}/assets/img/icon/wait.png" mode='aspectFill' alt="" class="img"></image>
       <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon" ></image>
     </view>
-
+    <!-- 审核失败弹出层 -->
+  <failCheck wx:if="{{checkBool}}"></failCheck>
   </view>

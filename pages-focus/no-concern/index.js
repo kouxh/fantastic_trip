@@ -9,7 +9,7 @@ Page({
     typeName:'抖音号',//类型名
     url:'https://v.douyin.com/J91Reuy/  ',//复制链接
     bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-trill.png',//底部图片
-    circleColor:'',//圆颜色
+    circleColor:'#ff62dc',//圆颜色
   },
 
   /**

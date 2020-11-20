@@ -55,6 +55,37 @@ Page({
       hasUserInfo: true
     })
   },
+
+  //滑动渐入渐出
+  slideupshow:function(that,param,px,opacity){
+    var animation = wx.createAnimation({
+      duration: 800,
+      timingFunction: 'ease',
+    });
+    animation.translateY(px).opacity(opacity).rotateY(360).step()
+    //将param转换为key
+    var json = '{"' + param + '":""}'
+    json = JSON.parse(json);
+    json[param] = animation.export()
+    //设置动画
+    that.setData(json)
+  },
+
+  //向右滑动渐入渐出
+  sliderightshow: function (that, param, px, opacity) {
+    var animation = wx.createAnimation({
+      duration: 800,
+      timingFunction: 'ease',
+    });
+    animation.translateX(px).opacity(opacity).step()
+    
+    //将param转换为key
+    var json = '{"' + param + '":""}'
+    json = JSON.parse(json);
+    json[param] = animation.export()
+    //设置动画
+    that.setData(json)
+  },
   // getPhoneNumber (e) {
   //   console.log(e,'0000000000000')
   //   console.log(e.detail.errMsg)
@@ -65,27 +96,18 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
   */
  onReady: function () {
-  var attentionAnim = wx.createAnimation({
-    duration:150,
-    timingFunction: 'ease',
-    delay: 0
-  })
-  //设置循环动画
-  this.attentionAnim = attentionAnim
-  var next = true;
-  setInterval(function () {
-    if (next) {
-      //根据需求实现相应的动画
-      this.attentionAnim.rotate(5).step()
-      next = !next;
-    } else {
-      this.attentionAnim.rotate(-2).step()
-      next = !next;
-    }
-    this.setData({
-      //导出动画到指定控件animation属性
-      attentionAnim: attentionAnim.export()
-    })
-  }.bind(this), 150)
+  
 },
+//页面展示时，触发动画
+onShow: function () {
+  this.slideupshow(this, 'slide_up1', 250, 1)
+  setTimeout(function () {
+    this.slideupshow(this, 'slide_up1', 220, 1)
+  }.bind(this), 1000);
+},
+//页面隐藏时，触发渐出动画
+onHide: function () {
+   //你可以看到，动画参数的200,0与渐入时的-200,1刚好是相反的，其实也就做到了页面还原的作用，使页面重新打开时重新展示动画
+  this.slideupshow(this, 'slide_up1', -250, 0)
+}
 })

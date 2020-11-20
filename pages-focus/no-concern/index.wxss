@@ -18,7 +18,7 @@ page {
   width: 137rpx;
 	height: 56rpx;
   position: absolute;
-  top: 42rpx;
+  top: 30rpx;
   left: 30rpx;
 }
 .mask-box{
@@ -102,24 +102,24 @@ page {
 .video{
   width: 620rpx;
   height: 340rpx;
-  object-fit: contain;
+  /* object-fit: contain; */
 }
 .trill{
   width: 620rpx;
-	height: 340rpx;
+	height: 300rpx;
 	box-shadow: 0rpx 2rpx 19rpx 0rpx 
 		#a3a3a3;
   border: solid 6rpx #ffffff;
   margin-top: 40rpx;
-  background-color: #090909;
+  background-color: #D4F4FF;
 }
 .copy{
-  color: #fff;  
-  font-size: 32rpx;
+  color: #000;  
+  font-size: 28rpx;
   display: flex;
   align-items: center;
-  line-height: 340rpx;
-  padding-left: 20rpx;
+  line-height: 300rpx;
+  padding-left: 28rpx;
 }
 .bottom-img{
   width: 100%;
@@ -127,6 +127,7 @@ page {
   position: absolute;
   bottom: 0rpx;
   z-index: 1000;
+ 
 }
 .copy-img{
   width: 100rpx;

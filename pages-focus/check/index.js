@@ -14,6 +14,13 @@ Page({
   onLoad: function (options) {
 
   },
+  //返回按钮
+  backFn(){
+    wx.navigateBack({
+      delta: 2
+    })
+  },
+  //下一步
   nextFn(){
     wx.switchTab({
       url: '/pages/own/index',
@@ -44,7 +51,9 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    wx.navigateBack({
+      delta: 2
+    })
   },
 
   /**

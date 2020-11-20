@@ -36,7 +36,7 @@ page {
   letter-spacing: 6rpx;
   color: #4d4d4d;
   position: absolute;
-  top: 630rpx;
+  top: 668rpx;
   left: 140rpx;
   
 }
@@ -47,8 +47,8 @@ page {
   border-radius: 12rpx;
   border: solid 2rpx #ff7800;
   position: absolute;
-  top: 758rpx;
-  left: 90rpx;
+  top: 780rpx;
+  left: 80rpx;
   padding: 10rpx;
 
 }
@@ -60,7 +60,7 @@ textarea {
   width: 196rpx;
   height: 74rpx;
   position: absolute;
-  top: 1028rpx;
+  top: 1068rpx;
  left: 270rpx;
 
 }

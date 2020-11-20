@@ -17,11 +17,11 @@ Page({
     //抖动相关的
     // setInterval(function() {
       // let isDoudong = that.data.isDoudong
-      setTimeout(function(){
-        that.setData({
-          isDoudong: false
-        })
-      },1000)
+      // setTimeout(function(){
+      //   that.setData({
+      //     isDoudong: false
+      //   })
+      // },1000)
      
     // }, 1000)
   
@@ -73,12 +73,22 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-        this.getTabBar()) {
-        this.getTabBar().setData({
-          selected: 1
+    // if (typeof this.getTabBar === 'function' &&
+    //     this.getTabBar()) {
+    //     this.getTabBar().setData({
+    //       selected: 1
+    //     })
+    //   }
+    let that = this;
+      //抖动相关的
+        setTimeout(function(){
+          that.setData({
+            isDoudong: false
+          })
+        },3000)
+        that.setData({
+          isDoudong: true
         })
-      }
  
   },
 
