@@ -1,6 +1,6 @@
 <wxs src="../../utils/utils.wxs" module="util" />
 <view class="pages-success-index">
-<image src="{{util.setImgUrl}}/assets/img/success-bg.jpg" mode='aspectFill' alt="" class="img"></image>
+<image src="{{util.setImgUrl}}/assets/img/success-bg.jpg"  alt="" class="img"></image>
   <view class="back-btn" bindtap="backFn">
 		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
 	</view> 

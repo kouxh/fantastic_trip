@@ -10,10 +10,10 @@ module.exports = {
     getConfig() {
       if (this.isRelease()) {
         //正式
-        return "https://march.yuanian.com";
+        return "https://march.yuanian.com/";
       } else {
         //测试
-        return "https://march.yuanian.com";
+        return "https://march.yuanian.com/";
       }
     },
   

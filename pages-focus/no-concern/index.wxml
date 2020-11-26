@@ -1,11 +1,9 @@
 <wxs src="../../utils/utils.wxs" module="util" />
-<view class="pages-no-concern-index">
-	<image src="{{util.setImgUrl}}/assets/img/focus-bg.jpg" mode='aspectFill' alt="" class="img"></image>
+<view class="pages-no-concern-index" style="height:{{model?'120':'100'}}%;">
+	<image src="{{util.setImgUrl}}/assets/img/focus-bg.jpg" mode='scaleToFill' alt="" class="img"></image>
 	<navigator open-type="navigateBack" hover-class="none" class="back-btn">
 		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
 	</navigator>
-	<view class="mask-box">
-	</view>
 	<view class="info-box">
 		<view class="name">
 			<view class="circle" style="background:{{circleColor}}"></view>

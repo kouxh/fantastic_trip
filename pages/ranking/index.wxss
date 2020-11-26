@@ -1,2 +1,9 @@
 /* pages/ranking/index.wxss */
 @import "../integral/index.wxss";
+.person{
+  width: 460rpx;
+  height: 522rpx;
+  position: absolute;
+  right: -200rpx;
+  bottom: 8%;
+}

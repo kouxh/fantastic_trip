@@ -1,6 +1,6 @@
 <wxs src="../../utils/utils.wxs" module="util" />
 <view class="pages-chech-index">
-<image src="{{util.setImgUrl}}/assets/img/check.jpg" mode='aspectFill' alt="" class="img"></image>
+<image src="{{util.setImgUrl}}/assets/img/check.jpg" alt="" class="img"></image>
   <view class="back-btn" catchtap="backFn">
 		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
 	</view>

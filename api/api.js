@@ -6,7 +6,7 @@ export default {
    * @return {[type]}        [description]
    */
   login(params) {
-    return fetch.fetchPost("applets/forum/login", params);
+    return fetch.fetchGet("api/march/login", params);
   },
   /**
    *判断是否是VIP

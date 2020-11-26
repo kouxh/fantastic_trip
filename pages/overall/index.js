@@ -7,7 +7,8 @@ Page({
   data: {
     loadEnd: false,
     isDoudong: true, //控制图片抖动
-    checkBool:false,//审核失败
+    checkBool:false,//审核失败弹框
+    developBool:false,//开拓弹框
   },
 
   /**

@@ -15,10 +15,8 @@ export default {
           //     title: "登录过期，请重新登录",
           //     icon: "none"
           //   });
-          //   wx.removeStorageSync('userInfoData');
-          //   wx.removeStorageSync('bindPhone');
-          //   getApp().globalData.userInfo=null;
-          //   return wx.reLaunch({ url: '/pages/login/index' })
+          //   wx.removeStorageSync('token');
+          //   return wx.reLaunch({ url: '/pages/index/index' })
           // }
         },
         err => {
@@ -45,10 +43,8 @@ export default {
           //     icon: "none"
           //   });
           //   wx.removeStorageSync('userInfoData');
-          //   wx.removeStorageSync('bindPhone');
-          //   getApp().globalData.userInfo=null;
-          //   console.log( getApp().globalData.userInfo,'777')
-          //   return wx.reLaunch({ url: '/pages/login/index' })
+          //   wx.removeStorageSync('token');
+          //   return wx.reLaunch({ url: '/pages/index/index' })
           // }
         },
         err => {
@@ -68,8 +64,7 @@ export default {
         baseURL: config.getConfig(),
         headers: {
          'content-type': 'application/json', // 默认值
-          token: wx.getStorageSync("userInfoData").token,
-          uid: wx.getStorageSync("userInfoData").uid,
+          token: wx.getStorageSync("token").token,
         },
         timeout: 10000
       };

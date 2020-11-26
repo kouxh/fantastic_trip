@@ -1,20 +1,7 @@
-<!-- <view class="container" >
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
-  </view>
-  <view class="usermotto" bindtap="jumpFn">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>animation='{{attentionAnim}}' -->
 <wxs src="../../utils/utils.wxs" module="util" />
 <view class="pages-index">
 	<view class="index-bg">
-		<image src="{{util.setImgUrl}}/assets/img/home-bg.jpg" mode='aspectFill' alt="" class="index-img"></image>
+		<image src="{{util.setImgUrl}}/assets/img/home-bg.jpg"  alt="" class="index-img"></image>
     <image src="{{util.setImgUrl}}/assets/img/icon/index-title.png" mode='aspectFill' alt="" class="title-img" animation="{{slide_up1}}"></image>
 	</view>
   <view class="index-btn topImage" bindtap="jumpFn">

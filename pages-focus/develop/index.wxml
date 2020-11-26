@@ -1,6 +1,6 @@
 <wxs src="../../utils/utils.wxs" module="util" />
 <view class="pages-develop-index">
-  <image src="{{util.setImgUrl}}/assets/img/develop-bg.jpg" mode='aspectFill' alt="" class="bg-img"></image>
+  <image src="{{util.setImgUrl}}/assets/img/develop-bg.jpg"  mode="scaleToFill" alt="" class="bg-img"></image>
   <navigator open-type="navigateBack" hover-class="none" class="back-btn">
 		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
 	</navigator>

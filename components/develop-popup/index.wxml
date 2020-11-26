@@ -1,0 +1,28 @@
+<wxs src="../../utils/utils.wxs" module="util" />
+<view catchtouchmove="true">
+	<!-- 弹出层 -->
+	<view class="common_mask" hidden="{{!developShow}}">
+		<!-- 内容层 -->
+		<view class="mask_box">
+			<view class="content">
+				<view class="bg-box">
+					<image src="{{util.setImgUrl}}/assets/img/icon/popup.png" mode='aspectFill' alt="" class="bg-img"></image>
+					<view class="do-box">
+						<view class="name-box">
+							<view class="text">撒花，棒棒哒</view>
+							<view class="text">你已<text class="typeName">全部闯关成功</text></view>
+              <view class="text">成为“元家军”中最优秀的一员</view>
+							<view class="text">我们一起去开拓更多领域吧</view>
+						</view>
+						<view class="change-btn" bindtap="changeFn">
+							<image src="{{util.setImgUrl}}/assets/img/icon/popup-btn.png" mode='aspectFill' alt="" class="img"></image>
+						</view>
+					</view>
+				</view>
+				<view class="close-box" catch:tap="closeMask">
+					<image class="close-img" src="http://img.deiyou.net/upload/seller/goods/image/2019/11/7/95fb1a0842a04fe98f559c9956e6489a.jpg" />
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

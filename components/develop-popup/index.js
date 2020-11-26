@@ -1,16 +1,9 @@
 Component({
-   // 组件的属性列表
-   properties: {
-    typeName: {
-      type: String,
-    } // 用户手机号
-  },
   /**
    * 页面的初始数据
    */
   data: {
-    changeShow:true,//控制弹出的显示隐藏
-    // typeName:'头条号'
+    developShow:true,//控制弹出的显示隐藏
   },
   
 
@@ -24,20 +17,14 @@ Component({
   methods: {
     //关闭弹层
     closeMask(){
-      // this.setData({
-      //   changeShow:false
-      // })
-      let myEventDetail = { // 需要传递什么数据就在这个对象中写
-        changeShow: false
-      }
-      // myEventDetail 对象，提供给事件监听函数的参数数据
-      // close 是自定义名称事件，父组件中监听使用
-      this.triggerEvent('close', myEventDetail)
+      this.setData({
+        developShow:false
+      })
     },
     //点击去修改跳转
     changeFn(){
-      wx.redirectTo({
-        url: `/pages-focus/no-concern/index?name=${this.data.typeName}`,
+      wx.navigateTo({
+        url: `/pages-focus/develop/index`,
       })
       
     }

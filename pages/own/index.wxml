@@ -1,52 +1,52 @@
 <wxs src="../../utils/utils.wxs" module="util" />
 <view class="pages-own-index">
-	<image src="{{util.setImgUrl}}/assets/img/own-bg.jpg" mode='aspectFill' alt="" class="img"></image>
-	<view class="each-icon {{isDoudong?'topImage':''}}">
-		<image src="{{util.setImgUrl}}/assets/img/icon/own-station.png" mode='aspectFill' alt="" class="img"></image>
-		<!-- <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-each-icon"></image> -->
-	</view>
-  <view class="line-img">
-    <image src="{{util.setImgUrl}}/assets/img/icon/1.png" mode='aspectFill' alt="" class="img"></image>
-  </view>
-  <view class="headline-icon {{isDoudong?'topImage':''}}" catchtap="headlineFn"  data-name='头条号'>
-		<image src="{{util.setImgUrl}}/assets/img/icon/own-headline.png" mode='aspectFill' alt="" class="img"></image>
-		<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
-	</view>
-  <view class="line1-img">
-    <image src="{{util.setImgUrl}}/assets/img/icon/2.png" mode='aspectFill' alt="" class="img"></image>
-  </view>
-	<view class="trill-icon {{isDoudong?'topImage':''}}" catchtap="trillFn"  data-name='抖音号'>
-		<image src="{{util.setImgUrl}}/assets/img/icon/own-trill.png" mode='aspectFill' alt="" class="img"></image>
-		<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
-	</view>
-  <view class="line2-img">
-    <image src="{{util.setImgUrl}}/assets/img/icon/3.png" mode='aspectFill' alt="" class="img"></image>
-  </view>
-  <view class="video-icon {{isDoudong?'topImage':''}}" bindtap="videoFn" data-name='视频号'>
-		<image src="{{util.setImgUrl}}/assets/img/icon/own-video.png" mode='aspectFill' alt="" class="img"></image>
-		<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
-	</view>
-   <view class="line3-img">
-    <image src="{{util.setImgUrl}}/assets/img/icon/4.png" mode='aspectFill' alt="" class="img"></image>
-  </view>
-	<view class="zhihu-icon {{isDoudong?'topImage':''}}" catchtap="zhihuFn" data-name="知乎号">
-		<image src="{{util.setImgUrl}}/assets/img/icon/own-zhihu.png" mode='aspectFill' alt="" class="img"></image>
-		<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
-	</view>
-  <view class="line4-img">
-    <image src="{{util.setImgUrl}}/assets/img/icon/5.png" mode='aspectFill' alt="" class="img"></image>
-  </view>
-	<view class="himalaya-icon {{isDoudong?'topImage':''}}" catchtap="himalayaFn" data-name="喜马拉雅号">
-		<image src="{{util.setImgUrl}}/assets/img/icon/own-himalaya.png" mode='aspectFill' alt="" class="img"></image>
-		<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
-	</view>
-  <view class="line5-img">
-    <image src="{{util.setImgUrl}}/assets/img/icon/6.png" mode='aspectFill' alt="" class="img"></image>
-  </view>
-	<view class="wait-icon {{isDoudong?'topImage':''}}" catchtap="developFn">
-		<image src="{{util.setImgUrl}}/assets/img/icon/own-wait.png" mode='aspectFill' alt="" class="img" ></image>
-		<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
-	</view>
+	  <image src="{{util.setImgUrl}}/assets/img/own-bg.jpg" mode="scaleToFill" alt="" class="img"></image>
+		<view class="each-icon {{isDoudong?'topImage':''}}">
+			<image src="{{util.setImgUrl}}/assets/img/icon/own-station.png" mode='aspectFill' alt="" class="img"></image>
+			<!-- <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-each-icon"></image> -->
+		</view>
+		<view class="line-img">
+			<image src="{{util.setImgUrl}}/assets/img/icon/1.png" mode='aspectFill' alt="" class="img"></image>
+		</view>
+		<view class="headline-icon {{isDoudong?'topImage':''}}" catchtap="headlineFn"  data-name='头条号'>
+			<image src="{{util.setImgUrl}}/assets/img/icon/own-headline.png" mode='aspectFill' alt="" class="img"></image>
+			<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+		</view>
+		<view class="line1-img">
+			<image src="{{util.setImgUrl}}/assets/img/icon/2.png" mode='aspectFill' alt="" class="img"></image>
+		</view>
+		<view class="trill-icon {{isDoudong?'topImage':''}}" catchtap="trillFn"  data-name='抖音号'>
+			<image src="{{util.setImgUrl}}/assets/img/icon/own-trill.png" mode='aspectFill' alt="" class="img"></image>
+			<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+		</view>
+		<view class="line2-img">
+			<image src="{{util.setImgUrl}}/assets/img/icon/3.png" mode='aspectFill' alt="" class="img"></image>
+		</view>
+		<view class="video-icon {{isDoudong?'topImage':''}}" bindtap="videoFn" data-name='视频号'>
+			<image src="{{util.setImgUrl}}/assets/img/icon/own-video.png" mode='aspectFill' alt="" class="img"></image>
+			<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+		</view>
+		<view class="line3-img">
+			<image src="{{util.setImgUrl}}/assets/img/icon/4.png" mode='aspectFill' alt="" class="img"></image>
+		</view>
+		<view class="zhihu-icon {{isDoudong?'topImage':''}}" catchtap="zhihuFn" data-name="知乎号">
+			<image src="{{util.setImgUrl}}/assets/img/icon/own-zhihu.png" mode='aspectFill' alt="" class="img"></image>
+			<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+		</view>
+		<view class="line4-img">
+			<image src="{{util.setImgUrl}}/assets/img/icon/5.png" mode='aspectFill' alt="" class="img"></image>
+		</view>
+		<view class="himalaya-icon {{isDoudong?'topImage':''}}" catchtap="himalayaFn" data-name="喜马拉雅号">
+			<image src="{{util.setImgUrl}}/assets/img/icon/own-himalaya.png" mode='aspectFill' alt="" class="img"></image>
+			<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+		</view>
+		<view class="line5-img">
+			<image src="{{util.setImgUrl}}/assets/img/icon/6.png" mode='aspectFill' alt="" class="img"></image>
+		</view>
+		<view class="wait-icon {{isDoudong?'topImage':''}}" catchtap="developFn">
+			<image src="{{util.setImgUrl}}/assets/img/icon/own-wait.png" mode='aspectFill' alt="" class="img" ></image>
+			<image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image>
+		</view>
 	<view class="integral all-integral">100</view>
 	<view class="integral confirm-integral">0</view>
 	<view class="integral wait-confirm-integral">0</view>
@@ -54,6 +54,6 @@
 		<image src="{{util.setImgUrl}}/assets/img/icon/exchange.png" mode='aspectFill' alt="" class="img"></image>
 	</view>
 <!-- 审核失败弹出层 -->
-  <failCheck wx:if="{{reqEndBool}}"></failCheck>
+  <failCheck wx:if="{{isShow}}" typeName="知乎号" bind:close="closeFn"></failCheck>
 </view>
 	 

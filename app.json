@@ -6,7 +6,8 @@
     "pages/ranking/index",
     "pages/integral/index",
     "custom-tab-bar/index",
-    "components/fail-check/index"
+    "components/fail-check/index",
+    "components/develop-popup/index"
   ],
   "subPackages": [
     {

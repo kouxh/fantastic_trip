@@ -6,7 +6,7 @@ Page({
    */
   data: {
     isDoudong: true, //控制图片抖动
-    reqEndBool: false, // 是否加载完成,可显示页面
+    isShow: false, // 是否加载完成,可显示页面
   },
 
   /**
@@ -25,6 +25,13 @@ Page({
      
     // }, 1000)
   
+  },
+  // 获取子组件传递过来的数据
+  closeFn(data){
+    console.log(data,'-------data.detail.changeShow-------')
+    this.setData({
+      isShow:data.detail.changeShow
+    })
   },
   // 点击待开拓站点
   developFn(){

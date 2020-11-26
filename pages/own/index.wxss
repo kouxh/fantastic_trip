@@ -1,6 +1,6 @@
 page {
-  width: 100%;
-  height: 100%;
+  width: 750rpx;
+  height: 100vh;
 }
 
 .pages-own-index {
@@ -19,7 +19,7 @@ page {
   width: 114rpx;
   height: 110rpx;
   position: absolute;
-  top: 412rpx;
+  top: 32%;
   left: 186rpx;
   z-index: 99;
 }
@@ -39,44 +39,45 @@ page {
 .video-icon,
 .himalaya-icon,
 .wait-icon {
-  width: 72rpx;
-  height: 90rpx;
+  width: 80rpx;
+  height:100rpx;
   position: absolute;
-  top: 425rpx;
-  right: 258rpx;
+  top: 33%;
+  right: 250rpx;
   z-index: 99;
 }
 
 
 .headline-icon {
-  top: 526rpx;
+  top: 40%;
   left: 328rpx;
 }
 
 .zhihu-icon {
-  top: 624rpx;
+  top: 48%;
   left: 216rpx;
 
 }
 
 .video-icon {
-  top: 546rpx;
+  top: 43%;
   right: 182rpx;
 }
 
 .himalaya-icon {
-  top: 692rpx;
-  left: 362rpx;
+  top: 52%;
+  left: 352rpx;
 }
 
 .wait-icon {
-  top: 764rpx;
+  top: 58%;
   right: 185rpx;
 }
 
-.shade-icon {
-  width: 70rpx;
-  height: 86rpx;
+.shade-icon { 
+  width: 99%;
+  height: 98%;
+  object-fit: cover;
   position: absolute;
   top: 0rpx;
   right: 0rpx;
@@ -84,7 +85,7 @@ page {
 
 .integral {
   position: absolute;
-  bottom: 146rpx;
+  bottom: 12.5%;
   font-size: 24rpx;
   color: #954b14;
   width: 100rpx;
@@ -113,7 +114,7 @@ page {
   width: 115rpx;
   height: 115rpx;
   position: absolute;
-  bottom: 112rpx;
+  bottom:10%;
   right: 70rpx;
 }
 
@@ -149,15 +150,15 @@ page {
   width: 80rpx;
   height: 100rpx;
   position: absolute;
-  top: 468rpx;
-  left: 262rpx;
+  top: 36%;
+  left: 260rpx;
 }
 
 .line1-img {
   width: 80rpx;
   height: 100rpx;
   position: absolute;
-  top: 460rpx;
+  top: 36%;
   left: 390rpx;
 
 }
@@ -166,7 +167,7 @@ page {
   width: 80rpx;
   height: 100rpx;
   position: absolute;
-  top: 468rpx;
+  top: 36%;
   right: 224rpx;
 
 }
@@ -175,7 +176,7 @@ page {
   width: 260rpx;
   height: 38rpx;
   position: absolute;
-  top: 625rpx;
+  top: 49%;
   left: 269rpx;
 
 }
@@ -184,7 +185,7 @@ page {
   width: 150rpx;
   height: 70rpx;
   position: absolute;
-  top: 643rpx;
+  top: 51%;
   left: 248rpx;
 
 }
@@ -193,7 +194,7 @@ page {
   width: 172rpx;
   height: 95rpx;
   position: absolute;
-  top: 724rpx;
+  top: 56%;
   right: 212rpx;
 
 }

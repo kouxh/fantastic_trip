@@ -1,6 +1,10 @@
 <wxs src="../../utils/utils.wxs" module="util" />
-<view class="pages-integral-index">
-	<image src="{{util.setImgUrl}}/assets/img/integral-bg.jpg" mode='aspectFill' alt="" class="img"></image>
+<view class="pages-integral-index" >
+	<image src="{{util.setImgUrl}}/assets/img/integral-bg (2).jpg" mode="scaleToFill" alt="" class="img "></image>
+	<!-- animation=='{{animation}}'  -->
+	<view class="gift  {{isDoudong?'animation':''}}" >
+	  <image src="{{util.setImgUrl}}/assets/img/icon/gift.png" mode='aspectFill' alt="" class="img"></image>
+	</view>
 	<view  class="back-btn" bindtap="backFn">
 		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
 	</view>

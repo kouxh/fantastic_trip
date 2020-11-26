@@ -1,6 +1,6 @@
 page {
-  width: 100%;
-  height: 100%;
+  width: 750rpx;
+  height: 100vh;
 }
 
 .pages-overall-index {
@@ -15,13 +15,20 @@ page {
   height: 100%;
   object-fit: cover;
 }
+.tooltip{
+  width: 136rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 28.5%;
+  left: 172rpx;
+}
 
 .each-icon {
-  width: 140rpx;
-  height: 180rpx;
+  width: 94rpx;
+  height: 116rpx;
   position: absolute;
-  top: 240rpx;
-  left: 172rpx;
+  top: 21%;
+  left: 196rpx;
 }
 .shade-each-icon{
   width: 100rpx;
@@ -36,8 +43,9 @@ page {
   font-weight: bold;
   color: #669f5f;
   position: absolute;
-  top: 48rpx;
-  left: 60rpx;
+  top: 44rpx;
+  left: 34rpx;
+  
 
 }
 
@@ -45,7 +53,7 @@ page {
   width: 80rpx;
   height: 100rpx;
   position: absolute;
-  top: 300rpx;
+  top: 24%;
   right: 266rpx;
 }
 
@@ -55,18 +63,18 @@ page {
   font-weight: bold;
   color: #e55cde;
   position: absolute;
-  top: 38rpx;
-  left: 30rpx;
+  top: 40rpx;
+  left: 34rpx;
 }
 .headline-icon {
-  top: 406rpx;
+  top: 32%;
   left: 324rpx;
 }
 .headline-num{
   color: #df6f6d;
 }
 .zhihu-icon{
-  top: 414rpx;
+  top: 32.5%;
   right: 188rpx;
 
 }
@@ -74,21 +82,21 @@ page {
   color: #549ed4;
 }
 .video-icon{
-  top: 498rpx;
+  top: 39%;
   left:210rpx;
 }
 .video-num{
   color: #ed8234;
 }
 .himalaya-icon{
-  top: 564rpx;
+  top: 44%;
   left: 362rpx;
 }
 .himalaya-num{
   color: #e3514d;
 }
 .wait-icon{
-  top: 650rpx;
+  top:50%;
   right: 200rpx;
 }
 .shade-icon{

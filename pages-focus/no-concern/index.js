@@ -10,6 +10,7 @@ Page({
     url:'https://v.douyin.com/J91Reuy/  ',//复制链接
     bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-trill.png',//底部图片
     circleColor:'#ff62dc',//圆颜色
+    model:false,//不同机型
   },
 
   /**
@@ -17,6 +18,16 @@ Page({
    */
   onLoad: function (options) {
     let that=this;
+    wx.getSystemInfo({
+      success(res) {
+       if(res.model=='iPhone 5'||res.model=='iPhone 6/7/8'||res.model=='iPhone 6'||res.model=='iPhone 7'||res.model=='iPhone 8'||res.model=='iPhone 6 Plus'||res.model=='iPhone 7 Plus'||res.model=='iPhone 8 Plus'){
+         that.setData({
+           model:true
+         })
+
+       }
+      }
+    })
     console.log(options,'------')
     if(options.name=="抖音号"){
       that.setData({
