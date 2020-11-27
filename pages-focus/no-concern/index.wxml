@@ -5,29 +5,27 @@
 		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
 	</navigator>
 	<view class="info-box">
+	<view class="name">
+			<view class="circle" style="background:{{circleColor}}"></view>
+			<view class="name-text">先关注再提交账号参与活动</view>
+		</view>
 		<view class="name">
 			<view class="circle" style="background:{{circleColor}}"></view>
-			<view class="name-text" wx:if="{{typeName=='视频号'}}">{{typeName}}名称：元年服务</view>
+			<view class="name-text" wx:if="{{typeName=='视频号'}}">{{typeName=='视频号'?'微信':''}}{{typeName}}名称：元年服务</view>
 			<view class="name-text" wx:else>{{typeName}}名称：元年科技</view>
-			
 		</view>
 		<view class="name">
 			<view class="circle" style="background:{{circleColor}}"></view>
-			<view class="name-text">关注并提交账号名称参与活动</view>
-		</view>
-		<view class="name">
-			<view class="circle" style="background:{{circleColor}}"></view>
-			<view class="name-text">你的账号名称：</view>
+			<view class="name-text">你的账号{{typeName=='抖音号'||typeName=='视频号'||typeName=='喜马拉雅号'?'昵称':'名称'}}：</view>
 			<input type="text" bindinput="accountFn" value="{{account}}" class="input-box" />
 			<view class="btn" catchtap="submitFn">
 				<image src="{{util.setImgUrl}}/assets/img/icon/submit.png" mode='aspectFill' alt="" class="img"></image>
 			</view>
 		</view>
-		<view class="tip">注：所提交账号必须真实关注了元年的头条号，否则通过粉丝核对后，
-			未关注的账号将视为无效</view>
+		<view class="tip"><text class="infuse">注：</text>你所提交的账号必须真正关注了元年的{{typeName}}，否则通过审核后，未关注的账号将视为无效。</view>
 		<view wx:if="{{typeName=='头条号'}}">
 			<view class="frame" >
-				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/f0cb72ead6c740c180c1cbc59453f710/%E5%A4%B4%E6%9D%A1%E5%8F%B7%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>
+				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/4e5bf894b624456b9e93ea64c5d27c0f/lv_0_20201127152007.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>
 			</view>
 			<view class="step">打开今日头条 > 输入：元年科技  > 点击“关注”</view>
 		</view>
@@ -42,19 +40,19 @@
 		</view>
 		<view wx:if="{{typeName=='知乎号'}}">
 			<view class="frame" >
-				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/f0cb72ead6c740c180c1cbc59453f710/%E5%A4%B4%E6%9D%A1%E5%8F%B7%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>
+				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/4e5bf894b624456b9e93ea64c5d27c0f/lv_0_20201127152007.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>
 			</view>
 			<view class="step">打开知乎 > 输入：元年科技 >选择：用户  >点击“关注”</view>
 		</view>
 		<view wx:if="{{typeName=='喜马拉雅号'}}">
 			<view class="frame" >
-				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/f0cb72ead6c740c180c1cbc59453f710/%E5%A4%B4%E6%9D%A1%E5%8F%B7%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>
+				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/4e5bf894b624456b9e93ea64c5d27c0f/lv_0_20201127152007.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>
 			</view>
-			<view class="step">打开喜马拉雅 > 输入：元年科技  > 点击关注“关注”</view>
+			<view class="step">打开喜马拉雅 > 输入：元年科技  > 点击“关注”</view>
 		</view>
 		<view wx:if="{{typeName=='视频号'}}">
 			<view class="frame" >
-				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/f0cb72ead6c740c180c1cbc59453f710/%E5%A4%B4%E6%9D%A1%E5%8F%B7%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>
+				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/4e5bf894b624456b9e93ea64c5d27c0f/lv_0_20201127152007.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>
 			</view>
 			<view class="step">打开微信  > 点击：发现 > 点击：视频号 >下拉显示搜索框 > 输入：元年服务 > 点击账号“关注”</view>
 		</view>

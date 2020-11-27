@@ -23,14 +23,14 @@ page {
 }
 .info-box{
   position:absolute;
-  top: 204rpx;
+  top: 14%;
   left: 60rpx;
   z-index: 1000;
 }
 .name{
   display: flex;
   align-items: center;
-  margin-bottom: 40rpx;
+  margin-bottom: 30rpx;
 }
 .circle{
   width: 11rpx;
@@ -62,14 +62,14 @@ page {
 .tip{
   width: 600rpx;
 	font-family: PingFangSC-Regular;
-	font-size: 20rpx;
+	font-size: 24rpx;
 	line-height: 38rpx;
   color: #363636;
   margin-left: 30rpx;
 }
 .step{
   font-family: PingFangSC-Regular;
-  font-size: 20rpx;
+  font-size: 24rpx;
   line-height: 38rpx;
   color: #363636;
   margin-top: 30rpx;
@@ -84,6 +84,7 @@ page {
 		#a3a3a3;
   border: solid 6rpx #ffffff;
   margin-top: 40rpx;
+  z-index: 0;
 }
 .video{
   width: 620rpx;
@@ -120,4 +121,8 @@ page {
   width: 100rpx;
   height: 52rpx;
   margin-left: 20rpx;
+}
+.infuse{
+  font-size: 24rpx;
+  font-weight: bold;
 }

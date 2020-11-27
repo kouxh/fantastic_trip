@@ -16,8 +16,8 @@ page {
 }
 
 .each-icon {
-  width: 114rpx;
-  height: 110rpx;
+  width: 124rpx;
+  height: 120rpx;
   position: absolute;
   top: 32%;
   left: 186rpx;
@@ -34,7 +34,6 @@ page {
 
 
 .trill-icon,
-.headline-icon,
 .zhihu-icon,
 .video-icon,
 .himalaya-icon,
@@ -49,8 +48,12 @@ page {
 
 
 .headline-icon {
+  width: 76rpx;
+  height:100rpx;
+  position: absolute;
   top: 40%;
   left: 328rpx;
+  z-index: 99;
 }
 
 .zhihu-icon {
@@ -75,8 +78,16 @@ page {
 }
 
 .shade-icon { 
-  width: 99%;
-  height: 98%;
+  width: 98%;
+  height: 96%;
+  object-fit: cover;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+}
+.shade-icon1 { 
+  width: 102%;
+  height: 95%;
   object-fit: cover;
   position: absolute;
   top: 0rpx;
@@ -119,7 +130,7 @@ page {
 }
 
 .topImage {
-  animation: image 1.5s 3;
+  animation: image 2s 3;
 }
 
 /* @keyframes image {

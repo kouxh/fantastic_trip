@@ -65,7 +65,6 @@ Page({
           that.setData({
             isDoudong: false
           })
-          console.log(that.data.isDoudong,'---------------')
         },3000)
         that.setData({
           isDoudong: true

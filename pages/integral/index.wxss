@@ -19,21 +19,25 @@ page {
   width: 85%;
   height: 32%;
   position: absolute;
-  top: 9%;
+  top: 12%;
   left: 52rpx;
   z-index: 0;
 
 }
-.back-btn{
-  width: 137rpx;
-	height: 56rpx;
+
+.bag{
+  width: 70%;
+  height: 9%;
   position: absolute;
-  top: 30rpx;
-  left: 30rpx;
+  top: 42%;
+  left: 112rpx;
+  z-index: 0;
+
 }
 .topImage{
   animation: image 1.5s 3; 
 }
+
 /* @keyframes image {
   0% {
       transform: translate(0px, 0px);

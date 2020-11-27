@@ -24,6 +24,7 @@ Page({
           if(wx.getStorageSync('token')=='' || wx.getStorageSync('token')==undefined){
              wx.qy.login({
               success: function(res) {
+                console.log(res.code,'--------index-----------')
                 if (res.code) {
                   wx.showLoading({
                     title: "登录中...",
@@ -52,6 +53,9 @@ Page({
                           title: res.data.errMsg,
                           icon: "none"
                         });
+                        // wx.switchTab({
+                        //   url: '/pages/overall/index',
+                        // })
                       }
                     }
                   })

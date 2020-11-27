@@ -104,8 +104,45 @@ page {
   top: 0rpx;
   right: 0rpx;
 }
+.text-box{
+  width: 88%;
+  height: 19%;
+  position: absolute;
+  bottom: 2%;
+  left: 8%;
+}
+.each{
+  display: flex;
+  align-items: center;
+}
+.circle{
+  min-width: 24rpx;
+  height: 24rpx;
+  border-radius: 12rpx;
+  background-color: #954b14;
+  line-height: 24rpx;
+  text-align: center;
+  font-size: 12rpx;
+	font-weight: bold;
+  color: #fff;
+  margin-top: -4rpx;
+}
+.three{
+  margin-top: -40rpx;
+}
+.text{
+  padding-left: 14rpx;
+  font-size: 20rpx;
+	font-weight: bold;
+	letter-spacing: 1rpx;
+	line-height: 42rpx;
+	color: #954b14;
+}
+.point{
+  color: #cb7519;
+}
 .topImage{
-  animation: image 1.5s 3; 
+  animation: image 2s 3; 
 }
 /* @keyframes image {
   0% {

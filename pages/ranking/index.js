@@ -12,14 +12,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
   //点击返回按钮
-  backFn(){
-    wx.switchTab({
-      url: '/pages/overall/index',
-    })
-  },
+  // backFn(){
+  //   wx.switchTab({
+  //     url: '/pages/overall/index',
+  //   })
+  // },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -33,13 +32,9 @@ Page({
    */
   onShow: function () {
     let that =this;
-    // if (typeof this.getTabBar === 'function' &&
-    //     this.getTabBar()) {
-    //     this.getTabBar().setData({
-    //       selected: 2
-    //     })
-    //   }
-    sliderightshow(that, 'slide_up', -100, 1)
+    setTimeout(() => {
+      sliderightshow(that, 'slide_up', -200, 1)
+    }, 200);
   },
 
   /**
@@ -47,8 +42,7 @@ Page({
    */
   onHide: function () {
     let that =this;
-    sliderightshow(that, 'slide_up', 100, 1)
-
+    sliderightshow(that, 'slide_up', 400, 1)
   },
 
   /**
