@@ -28,25 +28,24 @@
 
 .bg-img {
   width: 624rpx;
-height: 566rpx;
+  height: 600rpx;
 
 }
 
 .do-box {
   position: absolute;
-  top: 218rpx;
-left: 18rpx;
-
+  top: 220rpx;
+  left: 12rpx;
 }
 
 .name-box {
-  width: 590rpx;
+  /* width: 620rpx; */
   font-family: zihun197hao-damingsonghuaijiuban;
   font-size: 28rpx;
   line-height: 48rpx;
   letter-spacing: 2rpx;
   color: #000000;
-
+ 
 }
 
 .text {
@@ -55,19 +54,18 @@ left: 18rpx;
 
 .typeName {
   width: 168rpx;
-	height: 13rpx;
-	background-color: #F9B4C4;
+  background-color: #FECB8C;
   font-size: 30rpx;
 	font-weight: bold;
 	letter-spacing: 3rpx;
-	color: #e73574;
+	color: #f46700;
 }
 
 .change-btn {
   width: 198rpx;
   height: 60rpx;
   position: absolute;
-  top: 210rpx;
+  top:196rpx;
   left: 200rpx;
 
 
@@ -94,4 +92,14 @@ left: 18rpx;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.tip{
+  width: 620rpx;
+  height: 18rpx;
+	font-family: PingFangSC-Medium;
+	font-size: 18rpx;
+	letter-spacing: 2rpx;
+  color: #ec7b2d;
+  text-align: center;
+  margin-top: 94rpx;
 }

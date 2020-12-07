@@ -33,7 +33,7 @@ Page({
   onShow: function () {
     let that =this;
     setTimeout(() => {
-      sliderightshow(that, 'slide_up', -200, 1)
+      sliderightshow(that, 'slide_up',-200, 1)
     }, 200);
   },
 

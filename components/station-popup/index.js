@@ -3,7 +3,7 @@ Component({
    * 页面的初始数据
    */
   data: {
-    developShow:true,//控制弹出的显示隐藏
+    stationShow:true,//控制弹出的显示隐藏
   },
   
 
@@ -18,19 +18,12 @@ Component({
     //关闭弹层
     closeMask(){
       // this.setData({
-      //   developShow:false
+      //   stationShow:false
       // })
-      this.triggerEvent('developClose',{ developShow: false } )
+      // close 是自定义名称事件，父组件中监听使用
+      this.triggerEvent('stationClose',{ stationShow: false } )
     },
-    //点击去修改跳转
-    changeFn(){
-      wx.navigateTo({
-        url: `/pages-focus/develop/index`,
-      })
-      this.setData({
-        developShow:false
-      })
-    }
+  
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

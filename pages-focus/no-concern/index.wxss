@@ -75,7 +75,6 @@ page {
   margin-top: 30rpx;
   margin-left: 10rpx;
   width: 622rpx;
-
 }
 .frame{
   width: 620rpx;
@@ -85,11 +84,14 @@ page {
   border: solid 6rpx #ffffff;
   margin-top: 40rpx;
   z-index: 0;
+  /* position: absolute; */
 }
 .video{
   width: 620rpx;
   height: 340rpx;
-  /* object-fit: contain; */
+  z-index: 0;
+  position: absolute;
+  
 }
 .trill{
   width: 620rpx;
@@ -99,6 +101,8 @@ page {
   border: solid 6rpx #ffffff;
   margin-top: 40rpx;
   background-color: #D4F4FF;
+  z-index: 0;
+  position: relative;
 }
 .copy{
   color: #000;  

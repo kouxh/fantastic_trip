@@ -142,7 +142,7 @@ page {
   color: #cb7519;
 }
 .topImage{
-  animation: image 2s 3; 
+  animation: image 1s 3; 
 }
 /* @keyframes image {
   0% {
@@ -159,7 +159,24 @@ page {
 @keyframes image{
   0% {transform: scale(1,1);}
   25% {transform: scale(1.2,1.2);}
-  50% {transform: scale(1,1);}
+  50% {transform: scale(0.9,0.9);}
   70% {transform: scale(1.2,1.2);}
   100% {transform: scale(1,1);}
+  }
+  .suspend{
+    position: fixed;
+  top: 275rpx;
+  right: 0rpx;
+  z-index: 120;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f70;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top-left-radius: 26rpx;
+  border-bottom-left-radius: 26rpx;
+  padding: 12rpx 14rpx 10rpx 26rpx;
+  font-size: 24rpx;
   }

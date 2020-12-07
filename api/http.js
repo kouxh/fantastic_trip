@@ -9,15 +9,15 @@ export default {
       httpClient.fetchPost(url, params, that.getOptions(options), addUrl).then(
         response => {
           resolve(response);
-          console.log(response,'responseresponse----')
-          // if (response.code == 10043) {
-          //   wx.showToast({
-          //     title: "登录过期，请重新登录",
-          //     icon: "none"
-          //   });
-          //   wx.removeStorageSync('token');
-          //   return wx.reLaunch({ url: '/pages/index/index' })
-          // }
+          console.log(response,'response----')
+          if (response.errCode == 10043) {
+            wx.showToast({
+              title: "登录过期，请重新登录",
+              icon: "none"
+            });
+            wx.removeStorageSync('token');
+            return wx.reLaunch({ url: '/pages/index/index' })
+          }
         },
         err => {
           // 返回错误内容
@@ -36,16 +36,15 @@ export default {
       httpClient.fetchGet(url, params, that.getOptions(options), addUrl).then (
         response => {
           resolve(response);
-          console.log(response,'responseresponse------')
-          // if (response.code == 10043) {
-          //   wx.showToast({
-          //     title: "登录过期，请重新登录",
-          //     icon: "none"
-          //   });
-          //   wx.removeStorageSync('userInfoData');
-          //   wx.removeStorageSync('token');
-          //   return wx.reLaunch({ url: '/pages/index/index' })
-          // }
+          console.log(response,'response------')
+          if (response.errCode == 10043) {
+            wx.showToast({
+              title: "登录过期，请重新登录",
+              icon: "none"
+            });
+            wx.removeStorageSync('token');
+            return wx.reLaunch({ url: '/pages/index/index' })
+          }
         },
         err => {
           // 返回错误内容
@@ -64,7 +63,7 @@ export default {
         baseURL: config.getConfig(),
         headers: {
          'content-type': 'application/json', // 默认值
-          token: wx.getStorageSync("token").token,
+          token: wx.getStorageSync("token"),
         },
         timeout: 10000
       };

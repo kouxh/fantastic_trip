@@ -1,63 +1,69 @@
  <wxs src="../../utils/utils.wxs" module="util" />
-  <view class="pages-overall-index">
+ <view class="pages-overall-index">
     <image src="{{util.setImgUrl}}/assets/img/overall-bg.jpg"  mode="scaleToFill" alt="" class="img"></image>
     <view class="tooltip">
-    <image src="{{util.setImgUrl}}/assets/img/icon/tooltip.png" mode='aspectFill' alt="" class="img"></image>
+      <image src="{{util.setImgUrl}}/assets/img/icon/tooltip.png" mode='aspectFill' alt="" class="img"></image>
     </view>
-    <view class="each-icon {{isDoudong?'topImage':''}}">
+    <!-- <view class="suspend">悬浮</view> -->
+    <view class="each-icon {{isDoudong?'topImage':''}}" bindtap="stationFn">
       <image src="{{util.setImgUrl}}/assets/img/icon/all.png" mode='aspectFill' alt="" class="img"></image>
-      <view class="num">1831</view>
-      <!-- <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-each-icon"></image> -->
+      <view class="num">{{getShowData.all}}</view>
     </view>
-    <navigator hover-class="none" url='/pages-focus/no-concern/index?name=抖音号' class="trill-icon {{isDoudong?'topImage':''}}">
-      <image src="{{util.setImgUrl}}/assets/img/icon/trill.png" mode='aspectFill' alt="" class="img"></image>
-      <view class="trill-num">0</view>
-      <!-- <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image> -->
-    </navigator>
-    <navigator hover-class="none" url='/pages-focus/no-concern/index?name=头条号' class="headline-icon {{isDoudong?'topImage':''}}">
+    <view wx:for="{{showData}}" wx:key="index" wx:for-item="item" wx:for-index="index">
+      <!-- <view  wx:for="{{getShowData.user_follow}}" wx:for-item="it" wx:for-index="in" wx:key="in" > -->
+        <view class="{{item.className}} {{isDoudong?'topImage':''}}" catchtap="iconFn"  data-name='{{item.dataName}}' data-id="{{item.id}}">
+          <image src="{{util.setImgUrl}}/{{item.img}}" mode='aspectFill' alt="" class="img"></image>
+          <view class="{{item.classNum}}" wx:if='{{item.id==1}}'>{{getShowData.toutiao}}</view>
+          <view class="{{item.classNum}}" wx:if='{{item.id==2}}'>{{getShowData.douyin}}</view>
+          <view class="{{item.classNum}}" wx:if='{{item.id==3}}'>{{getShowData.zhihu}}</view>
+          <view class="{{item.classNum}}" wx:if='{{item.id==4}}'>{{getShowData.ximalaya}}</view>
+          <view class="{{item.classNum}}" wx:if='{{item.id==5}}'>{{getShowData.weixinshipinhao}}</view>
+        </view>
+      <!-- </view> -->
+      
+    </view>
+    
+    <!-- <view class="headline-icon {{isDoudong?'topImage':''}}" catchtap="iconFn"  data-name='头条号' data-type="4">
       <image src="{{util.setImgUrl}}/assets/img/icon/headline.png" mode='aspectFill' alt="" class="img"></image>
-      <view class="headline-num">0</view>
-      <!-- <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image> -->
-    </navigator>
-    <navigator hover-class="none" url='/pages-focus/no-concern/index?name=知乎号' class="zhihu-icon {{isDoudong?'topImage':''}}">
-      <image src="{{util.setImgUrl}}/assets/img/icon/zhihu.png" mode='aspectFill' alt="" class="img"></image>
-      <view class="zhihu-num">0</view>
-      <!-- <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image> -->
-    </navigator>
-    <navigator hover-class="none" url='/pages-focus/no-concern/index?name=视频号' class="video-icon {{isDoudong?'topImage':''}}">
+      <view class="headline-num">{{getShowData.toutiao}}</view>
+    </view> -->
+    <!-- <view class="zhihu-icon {{isDoudong?'topImage':''}}" catchtap="iconFn" data-name='视频号' data-type="2">
       <image src="{{util.setImgUrl}}/assets/img/icon/video.png" mode='aspectFill' alt="" class="img"></image>
-      <view class="video-num">0</view>
-      <!-- <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image> -->
-    </navigator>
-    <navigator hover-class="none" url='/pages-focus/no-concern/index?name=喜马拉雅号' class="himalaya-icon {{isDoudong?'topImage':''}}">
+      <view class="video-num">{{getShowData.weixinshipinhao}}</view>
+    </view>
+    <view class="video-icon {{isDoudong?'topImage':''}}" catchtap="iconFn" data-name="知乎号" data-type="3">
+      <image src="{{util.setImgUrl}}/assets/img/icon/zhihu.png" mode='aspectFill' alt="" class="img"></image>
+      <view class="zhihu-num">{{getShowData.zhihu}}</view>
+    </view>
+    <view class="himalaya-icon {{isDoudong?'topImage':''}}" catchtap="iconFn" data-name="喜马拉雅号" data-type="4">
       <image src="{{util.setImgUrl}}/assets/img/icon/himalaya.png" mode='aspectFill' alt="" class="img"></image>
-      <view class="himalaya-num">0</view>
-      <!-- <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon"></image> -->
-    </navigator>
+      <view class="himalaya-num">{{getShowData.ximalaya}}</view>
+    </view> -->
     <view class="wait-icon {{isDoudong?'topImage':''}}" catchtap="developFn">
       <image src="{{util.setImgUrl}}/assets/img/icon/wait.png" mode='aspectFill' alt="" class="img"></image>
-      <!-- <image src="{{util.setImgUrl}}/assets/img/icon/shade.png" mode='aspectFill'  alt="" class="img shade-icon" ></image> -->
     </view>
     <view class="text-box">
       <view class="each">
         <view class="circle">01</view>
-        <view class="text">旅途共5站，<text class="point">点击对应站点</text>，即可进行账号提交和教学页面</view>
+        <view class="text">旅途共5站，<text class="point">点击对应站点</text>，根据视频指示，参与活动</view>
       </view>
       <view class="each">
         <view class="circle">02</view>
-        <view class="text"><text class="point">每个站点</text>都需要<text class="point">先关注</text>对应的元年账号，<text class="point">再提交</text>你的账号昵称</view>
+        <view class="text"><text class="point">参与顺序：</text>先到<text class="point">各平台</text>关注元年账号，<text class="point">再提交</text>你的账号昵称</view>
       </view>
       <view class="each">
         <view class="circle three">03</view>
-        <view class="text">账号提交后，会有审核期，审核通过后，积分会<text class="point">偷偷潜藏</text>在你的账户中，积分兑礼上线后即可<text class="point">兑换奖品</text></view>
+        <view class="text">账号提交后，会有审核期，审核通过后，积分会<text class="point">计入</text>你的账户，积分兑礼上线,即可凭借积分<text class="point">兑换奖品</text></view>
       </view>
       <view class="each">
         <view class="circle">04</view>
-        <view class="text">越早加入到活动中来，积分越多，惊喜越多呦！</view>
+        <view class="text">特别提示：越早加入到活动中来，积分越多，惊喜越多呦</view>
       </view>
     </view>
     <!-- 审核失败弹出层 -->
-  <failCheck wx:if="{{checkBool}}" ></failCheck>
+  <failCheck wx:if="{{checkBool}}" typeName="{{typeName}}" bind:close="closeFn"></failCheck>
   <!-- 开拓弹出层 -->
-  <develop-popup wx:if="{{developBool}}"></develop-popup>
+  <develop-popup wx:if="{{developBool}}" bind:developClose="developClose"></develop-popup>
+  <!-- 总站点弹层 -->
+  <station-popup wx:if="{{stationBool}}" bind:stationClose="stationClose"></station-popup>
   </view>

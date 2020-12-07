@@ -11,13 +11,23 @@ Page({
     bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-trill.png',//底部图片
     circleColor:'#ff62dc',//圆颜色
     model:false,//不同机型
+    classId:'',//类型id
+    isPopup:'',//是否从弹层跳转
+    modeType:'ins',//ins提交 up 修改
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options,'-------')
     let that=this;
+    if(options.isPopup){
+      that.setData({
+        isPopup:options.isPopup,
+        modeType:'up'
+      })
+    }
     wx.getSystemInfo({
       success(res) {
        if(res.model=='iPhone 5'||res.model=='iPhone 6/7/8'||res.model=='iPhone 6'||res.model=='iPhone 7'||res.model=='iPhone 8'||res.model=='iPhone 6 Plus'||res.model=='iPhone 7 Plus'||res.model=='iPhone 8 Plus'){
@@ -28,39 +38,57 @@ Page({
        }
       }
     })
-    console.log(options,'------')
     if(options.name=="抖音号"){
       that.setData({
         typeName:options.name,
         bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-trill.png',
-        circleColor:'#ff62dc'
+        circleColor:'#ff62dc',
+        classId:2
       })
     }else if(options.name=="头条号"){
       that.setData({
         typeName:options.name,
         bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-headline.png',
-        circleColor:'#ff5e4d'
+        circleColor:'#ff5e4d',
+        classId:1
       })
     }else if(options.name=="知乎号"){
       that.setData({
         typeName:options.name,
         bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-zhihu.png',
-        circleColor:'#16a5ff'
+        circleColor:'#16a5ff',
+        classId:3
       })
     }else if(options.name=="视频号"){
       that.setData({
         typeName:options.name,
         bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-video.png',
-        circleColor:'#ff8519'
+        circleColor:'#ff8519',
+        classId:5
       })
     }else if(options.name=="喜马拉雅号"){
       that.setData({
         typeName:options.name,
         bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-himalaya.png',
-        circleColor:'#eb3f3f'
+        circleColor:'#eb3f3f',
+        classId:4
       })
     }
   },
+    //返回按钮
+  backFn(){
+      if(this.data.isPopup){
+        let pages = getCurrentPages() //获取当前页面栈的信息
+        let prevPage = pages[pages.length - 2] //获取上一个页面
+        prevPage.setData({ //把需要回传的值保存到上一个页面
+          close: "true"
+        });
+      }
+      wx.navigateBack({
+        delta: 1
+      })
+  },
+
   // 复制
   copyFn(e) {
     var code = e.currentTarget.dataset.copy;
@@ -82,10 +110,41 @@ Page({
   },
   submitFn(){
     // 请求提交接口请求成功跳转
-    wx.navigateTo({
-      url: `/pages-focus/check/index?name=${this.data.typeName}`,
-    })
-
+    let that=this;
+    if(that.data.account==''){
+      return wx.showToast({ title: "请输入账号", icon: "none" });
+    }
+    getApp()
+        .globalData.api.addUserName({
+          March_Token:wx.getStorageSync('token'),
+          nickName:that.data.account,
+          class_id:that.data.classId,
+          mode:that.data.modeType
+        }).then(res=>{
+          if(res.errCode == 200){
+            
+            // 1审核中 2审核成功 3审核失败
+            if(res.data.status==1){
+              wx.showToast({ title: '提交成功,审核中', icon: "none" });
+            }
+            setTimeout(() => {
+              wx.navigateTo({
+                url: `/pages-focus/check/index?name=${this.data.typeName}`,
+              })
+            }, 1000);
+          }else if (res.errCode == 40035){
+                wx.showToast({ title: '等待审核', icon: "none" });
+          }else if (res.errCode == 40001){
+           wx.showToast({ title: '参数为空', icon: "none" });
+          } else if (res.errCode == 40030){
+            wx.showToast({ title:'昵称已被占用', icon: "none" });
+           }
+           else if (res.errCode == 40029){
+            wx.showToast({ title: "提交失败，请稍后重试哟！", icon: "none" });
+           }else if(res.errCode == 40039){
+            wx.showToast({ title: "此昵称已经提交过了，请更换昵称", icon: "none" });
+           }
+        })
   },
 
   // 账号同步
@@ -117,6 +176,17 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+        //返回按钮
+    if(this.data.isPopup){
+      let pages = getCurrentPages() //获取当前页面栈的信息
+      let prevPage = pages[pages.length - 2] //获取上一个页面
+      prevPage.setData({ //把需要回传的值保存到上一个页面
+        close: "true"
+      });
+    }
+    wx.navigateBack({
+      delta: 1
+    })
 
   },
 

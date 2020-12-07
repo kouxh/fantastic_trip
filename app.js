@@ -29,7 +29,6 @@ App({
            wx.qy.login({
             success: function(res) {
               console.log(res.code,'----res.code------')
-              
               if (res.code) {
               // 发起网络请求
                 wx.request({
@@ -40,13 +39,22 @@ App({
                   success:function(res){
                     if(res.data.errCode==200){
                       wx.setStorageSync('token', res.data.data.custom_token)
+                    }else if(res.data.errCode==10043){
+                      wx.qy.login()
                     }else{
-                      // wx.showToast({
-                      //   title: res.data.errMsg,
-                      //   icon: "none"
-                      // });
+                      wx.showToast({
+                        title: res.data.errMsg,
+                        icon: "none"
+                      });
                     }
+                  },
+                  fail: function(res){
+                    wx.showToast({
+                      title: res,
+                      icon: "none"
+                    });
                   }
+                  
                 })
               } else {
                 console.log('登录失败！' + res.errMsg)
@@ -57,7 +65,7 @@ App({
             }
           });
         }else{
-          console.log(wx.getStorageSync('token'),'---------------')
+          console.log(wx.getStorageSync('token'),'----有token-----------')
         }
         
       }
@@ -68,35 +76,48 @@ App({
       success: function(res){
         console.log(res,'-----session_key-------')
         //session_key 未过期，并且在本生命周期一直有效
-        wx.qy.login();
+        
       },
       fail: function(res){
         // session_key 已经失效，需要重新执行登录流程
         //  登录
-          // wx.qy.login({
-          //   success: function(res) {
-          //     console.log(res.code,'------res.code222222222-----------')
-          //     if (res.code) {
-          //     // 发起网络请求
-          //       wx.request({
-          //         url: 'https://march.yuanian.com/api/march/login',
-          //         data: {
-          //           code: res.code
-          //         },
-          //         success:function(res){
-          //           if(res.data.errCode==200){
-          //             wx.setStorageSync('token', res.data.data.custom_token)
-          //           }
-          //         }
-          //       })
-          //     } else {
-          //       console.log('登录失败！' + res.errMsg)
-          //     }
-          //   },
-          //   fail: function(res){
-          //     console.log(res,'获取code失败')
-          //   }
-          // });
+          wx.qy.login({
+            success: function(res) {
+              console.log(res.code,'------res.code222222222-----------')
+              if (res.code) {
+              // 发起网络请求
+                wx.request({
+                  url: 'https://march.yuanian.com/api/march/login',
+                  data: {
+                    code: res.code
+                  },
+                  success:function(res){
+                    if(res.data.errCode==200){
+                      wx.setStorageSync('token', res.data.data.custom_token)
+                    }else if(res.data.errCode==10043){
+                      wx.qy.login()
+                    }else{
+                      wx.showToast({
+                        title: res.data.errMsg,
+                        icon: "none"
+                      });
+                    }
+                  },
+                  fail: function(res){
+                    wx.showToast({
+                      title: res,
+                      icon: "none"
+                    });
+                  }
+                })
+              } else {
+                console.log('登录失败！' + res.errMsg)
+              }
+            },
+            fail: function(res){
+              console.log(res,'获取code失败')
+            }
+          });
       }
     });
     
@@ -112,6 +133,18 @@ App({
         }
       }
     })
+    // 设置 InnerAudioContext 的播放选项。设置之后对当前小程序全局生效。
+    // wx.setInnerAudioOption({ // ios在静音状态下能够正常播放音效
+    //   obeyMuteSwitch: false,   // 是否遵循系统静音开关，默认为 true。当此参数为 false 时，即使用户打开了静音开关，也能继续发出声音。
+    //   success: function(e) {
+    //     console.log(e)
+    //     console.log('play success')
+    //   },
+    //   fail: function(e) {
+    //     console.log(e)
+    //     console.log('play fail')
+    //   }
+    // })
   },
 
   globalData: {

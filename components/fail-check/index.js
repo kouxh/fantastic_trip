@@ -36,10 +36,9 @@ Component({
     },
     //点击去修改跳转
     changeFn(){
-      wx.redirectTo({
-        url: `/pages-focus/no-concern/index?name=${this.data.typeName}`,
+      wx.navigateTo({
+        url: `/pages-focus/no-concern/index?name=${this.data.typeName}&isPopup=true`,
       })
-      
     }
   },
   /**

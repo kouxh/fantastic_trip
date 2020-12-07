@@ -1,4 +1,3 @@
-// pages-focus/develop/index.js
 Page({
 
   /**
@@ -17,9 +16,28 @@ Page({
   // 点击提交按钮
   submitFn(){
     // 请求成功接口 成功后跳转
-    wx.navigateTo({
-      url: '/pages-focus/success/index',
-    })
+    let that =this;
+    if(that.data.value==''){
+      return wx.showToast({ title: "请输入内容", icon: "none" });
+    }
+    getApp()
+        .globalData.api.insertUserMessage({
+          March_Token:wx.getStorageSync('token'),
+          message:that.data.value,
+        }).then(res=>{
+          if(res.errCode == 200){
+            wx.showToast({ title: '提交成功', icon: "none" });
+            setTimeout(() => {
+              wx.navigateTo({
+                url: '/pages-focus/success/index',
+              })
+            }, 1000);
+          }else if(res.errCode == 40009){
+            wx.showToast({ title: "已提交过宝贵意见！", icon: "none" });
+          }else{
+            wx.showToast({ title:res.errMsg, icon: "none" });
+          }
+        })
   },
   // 评论内容 同步
   inputValueFn(e) {

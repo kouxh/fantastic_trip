@@ -41,7 +41,7 @@
 .name-box {
   width: 620rpx;
   font-family: zihun197hao-damingsonghuaijiuban;
-  font-size: 28rpx;
+  font-size: 26rpx;
   line-height: 48rpx;
   letter-spacing: 2rpx;
   color: #000000;
@@ -55,7 +55,7 @@
 .typeName {
   width: 86rpx;
   background-color: #d2ffb1;
-  font-size: 32rpx;
+  font-size: 30rpx;
   letter-spacing: 2rpx;
   color: #1c8e38;
 }
@@ -90,7 +90,7 @@
   height: 62rpx;
   text-align: center;
   position: absolute;
-  top: 885rpx;
+  top: 70%;
   left: 45%;
 
 }

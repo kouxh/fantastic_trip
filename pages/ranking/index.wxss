@@ -4,6 +4,6 @@
   width: 460rpx;
   height: 522rpx;
   position: absolute;
-  right: -400rpx;
+  right:-400rpx;
   bottom: 8%;
 }

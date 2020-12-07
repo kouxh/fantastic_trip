@@ -6,7 +6,16 @@ Page({
    */
   data: {
     isDoudong: true, //控制图片抖动
-    isShow: false, // 是否加载完成,可显示页面
+    checkBool:false,//审核失败弹框
+    stationBool:false,//点击总站弹框
+    developBool:false ,//开拓弹框
+    typeName:'',//弹层类型名
+    isHeadline:true,//控制头条是否遮罩
+    isTrill:true,//控制抖音是否遮罩
+    isZhihu:true,//控制知乎是否遮罩
+    isVideo:true,//控制视频是否遮罩
+    isHimalaya:true,//控制喜马拉雅是否遮罩
+    isDevelop:true,//待发展是否遮罩
   },
 
   /**
@@ -14,23 +23,79 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
-    //抖动相关的
-    // setInterval(function() {
-      // let isDoudong = that.data.isDoudong
-      // setTimeout(function(){
-      //   that.setData({
-      //     isDoudong: false
-      //   })
-      // },1000)
-     
-    // }, 1000)
-  
+    that.getShow();
+  },
+  //获取首页信息
+  getShow(){
+    let that=this;
+    getApp()
+        .globalData.api.getShow({
+          March_Token:wx.getStorageSync('token')
+        }).then(res=>{
+          if (res.errCode == 200){
+            let isHeadline = res.data.user_follow.find(c=>c.un_cid == 1);
+            if(isHeadline){
+              that.setData({
+                isHeadline:false
+              })
+            }
+            let isTrill = res.data.user_follow.find(c=>c.un_cid == 2);
+            if(isTrill) {
+              that.setData({
+                isTrill:false
+              })
+            }
+            let isZhihu = res.data.user_follow.find(c=>c.un_cid == 3);
+            if(isZhihu){
+              that.setData({
+                isZhihu:false
+              })
+            }
+            let isHimalaya = res.data.user_follow.find(c=>c.un_cid == 4);
+            if(isHimalaya){
+              that.setData({
+                isHimalaya:false
+              })
+            }
+            let isVideo = res.data.user_follow.find(c=>c.un_cid == 5);
+            if(isVideo){
+              that.setData({
+                isVideo:false
+              })
+            }
+            if(res.data.user_follow.length>=5){
+                that.setData({
+                  isDevelop:false,
+                  // developBool:true
+                })
+            }
+          }else{
+           wx.showToast({ title: res.errMsg, icon: "none" });
+          }
+        })
+  },
+  // 点击总站触发事件
+  stationFn(){
+    this.setData({
+      stationBool:!this.data.stationBool
+    })
+  },
+  // 点击总站弹层关闭事件
+  stationClose(data){
+    this.setData({
+      stationBool:data.detail.stationShow
+    })
+  },
+  // 开拓弹出层
+  developClose(e){
+    this.setData({
+      developBool:e.detail.developShow
+    })
   },
   // 获取子组件传递过来的数据
   closeFn(data){
-    console.log(data,'-------data.detail.changeShow-------')
     this.setData({
-      isShow:data.detail.changeShow
+      checkBool:data.detail.changeShow
     })
   },
   // 点击待开拓站点
@@ -39,36 +104,46 @@ Page({
       url: '/pages-focus/develop/index',
     })
   },
-  // 点击头条号
-  headlineFn(e){
-    wx.navigateTo({
-      url: '/pages-focus/no-concern/index?name='+ e.currentTarget.dataset.name,
-    })
+
+   // 点击图标
+   iconFn(e){
+    console.log(e,'--own-----------')
+    this.getUserStatus(e.currentTarget.dataset.id,e.currentTarget.dataset.name)
   },
-  //点击抖音号
-  trillFn(e){
-    wx.navigateTo({
-      url: '/pages-focus/no-concern/index?name='+ e.currentTarget.dataset.name,
-    })
+  //用户每个分类下的状态
+  getUserStatus(classId,name){
+    let that=this;
+    getApp()
+        .globalData.api.getUserStatus({
+          March_Token:wx.getStorageSync('token'),
+          class_id:classId
+        }).then(res=>{
+          if (res.errCode == 200){
+             // type:0未关注 1 审核中 2审核成功 3 审核失败
+              if(res.data.status==0){
+                wx.navigateTo({
+                  url: '/pages-focus/no-concern/index?name='+ name,
+                })
+              }else if(res.data.status==1){
+                wx.navigateTo({
+                  url: '/pages-focus/check/index',
+                })
+              }else if(res.data.status==2){
+                wx.navigateTo({
+                  url: '/pages-focus/pass-check/index',
+                })
+              }else if(res.data.status==3){
+                this.setData({
+                  checkBool:true,
+                  typeName:name
+                })
+              }
+          }else{
+           wx.showToast({ title: res.errMsg, icon: "none" });
+          }
+        })
   },
-  // 点击视频号
-  videoFn(e){
-    wx.navigateTo({
-      url: '/pages-focus/no-concern/index?name='+ e.currentTarget.dataset.name,
-    })
-  },
-  //点击知乎号
-  zhihuFn(e){
-    wx.navigateTo({
-      url: '/pages-focus/no-concern/index?name='+ e.currentTarget.dataset.name,
-    })
-  },
-  //点击喜马拉雅号
-  himalayaFn(e){
-    wx.navigateTo({
-      url: '/pages-focus/no-concern/index?name='+ e.currentTarget.dataset.name,
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -80,13 +155,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // if (typeof this.getTabBar === 'function' &&
-    //     this.getTabBar()) {
-    //     this.getTabBar().setData({
-    //       selected: 1
-    //     })
-    //   }
     let that = this;
+ 
       //抖动相关的
         setTimeout(function(){
           that.setData({
@@ -96,14 +166,22 @@ Page({
         that.setData({
           isDoudong: true
         })
- 
+        if (this.data.close) {
+          this.setData({
+            checkBool:false,
+            close:''
+          })
+          // this.data.close = '';
+        }
+      
   },
+
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+ 
   },
 
   /**

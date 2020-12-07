@@ -9,12 +9,36 @@ export default {
     return fetch.fetchGet("api/march/login", params);
   },
   /**
-   *判断是否是VIP
+   *获取首页信息
    * @param  {[type]} params [description]
    * @return {[type]}        [description]
    */
-  checkUserVip(params) {
-    return fetch.fetchGet("applets/forum/checkUserVip", params);
+  getShow(params) {
+    return fetch.fetchGet("api/march/get_show", params);
+  },
+  /**
+   *用户添加昵称或修改昵称
+   * @param  {[type]} params [description]
+   * @return {[type]}        [description]
+   */
+  addUserName(params) {
+    return fetch.fetchGet("api/march/insert_and_up_user_nickname", params);
+  },
+  /**
+   *用户每个分类下的状态
+   * @param  {[type]} params [description]
+   * @return {[type]}        [description]
+   */
+  getUserStatus(params) {
+    return fetch.fetchGet("api/march/get_user_column_status", params);
+  },
+  /**
+   *用户提交开拓意见
+   * @param  {[type]} params [description]
+   * @return {[type]}        [description]
+   */
+  insertUserMessage(params) {
+    return fetch.fetchGet("api/march/insert_user_message", params);
   },
 
 }

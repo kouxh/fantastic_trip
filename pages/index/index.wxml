@@ -2,10 +2,11 @@
 <view class="pages-index">
 	<view class="index-bg">
 		<image src="{{util.setImgUrl}}/assets/img/home-bg.jpg"  alt="" class="index-img"></image>
-    <image src="{{util.setImgUrl}}/assets/img/icon/index-title.png" mode='aspectFill' alt="" class="title-img" animation="{{slide_up1}}"></image>
+    <!-- <image src="{{util.setImgUrl}}/assets/img/icon/index-title.png" mode='aspectFill' alt="" class="title-img" animation="{{slide_up1}}"></image> -->
+    <image src="{{util.setImgUrl}}/assets/img/icon/index-title.png" mode='aspectFit' alt="" class="title-img image"></image>
 	</view>
   <view class="index-btn topImage" bindtap="jumpFn">
-    <image src="{{util.setImgUrl}}/assets/img/index-btn.jpg" mode='aspectFill' alt="" class="index-img"></image>
+    <image src="{{util.setImgUrl}}/assets/img/icon/index-btn.png" mode='aspectFill' alt="" class="index-img"></image>
    </view>
   <view class="index-tip"><text>元年科技内部活动，禁止任何人以任何形式外传</text></view>
 </view>

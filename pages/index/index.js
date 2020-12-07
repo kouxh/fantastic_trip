@@ -4,14 +4,15 @@ const app = getApp()
 
 Page({
   data: {
-    code:''
+    code:'',
+    isDoudong: true, //控制图片抖动
   },
   jumpFn:function(){
     let that=this;
     var isWxWork = false;
     wx.getSystemInfo({
       success(res) {
-        console.log(res.environment);
+        console.log(res.environment,'----------');
         isWxWork = res.environment == 'wxwork';
         if (!isWxWork) {
             // 当前环境不是企业微信，怎么处理你随便
@@ -78,10 +79,32 @@ Page({
         
       }
     })
-   
+    
   },
   onLoad: function () {
-  
+  // //添加音效
+    // const innerAudioContext = wx.createInnerAudioContext()
+    // innerAudioContext.autoplay = true  // 是否自动开始播放，默认为 false
+    // innerAudioContext.loop =false  // 是否循环播放，默认为 false
+    // // wx.setInnerAudioOption({ // ios在静音状态下能够正常播放音效
+    // //   obeyMuteSwitch: false,   // 是否遵循系统静音开关，默认为 true。当此参数为 false 时，即使用户打开了静音开关，也能继续发出声音。
+    // //   success: function(e) {
+    // //     console.log(e)
+    // //     console.log('play success')
+    // //   },
+    // //   fail: function(e) {
+    // //     console.log(e)
+    // //     console.log('play fail')
+    // //   }
+    // // })
+    // innerAudioContext.src = 'http://resource.deiyou.net/deiyoudian/ycfJoVKYqvNIY3xIGEfhDh27dkd2AKBROGWVtG8NFeSVKV4WHuXvz35JpfruPfnvIwUE6ENk8RK3LZi0BpkOujpCHjshhb2etPe1/15757096630moCk.mp3';  // 音频资源的地址
+    // innerAudioContext.onPlay(() => {  // 监听音频播放事件
+    //   console.log('开始播放')
+    // })
+    // innerAudioContext.onError((res) => { // 监听音频播放错误事件
+    //   console.log(res.errMsg)
+    //   console.log(res.errCode)
+    // })
   },
 
   /**
@@ -99,18 +122,16 @@ onShow: function () {
     slideupshow(that, 'slide_up1', 220, 1,0)
     }.bind(that), 1000);
   }, 800);
-   //登录态刷新
-  //  wx.qy.login({
-  //   success(res) {
-  //     console.log(res,'00000000000000')
-  //     if(res.code){
-  //       that.setData({
-  //         code:res.code
-  //       })
-  //       console.log(that.data.code,'code-----------')
-  //     }
-  //   }
-  // })
+      //抖动相关的
+        setTimeout(function(){
+          that.setData({
+            isDoudong: false
+          })
+        },2000)
+        that.setData({
+          isDoudong: true
+        })
+  
   
 },
 //页面隐藏时，触发渐出动画
