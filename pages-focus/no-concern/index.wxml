@@ -60,4 +60,6 @@
 	<view class="bottom-img">
 		<image src="{{bottomImg}}" mode='aspectFill' alt="" class="img"></image>
 	</view>
+	<!-- 审核失败弹出层 -->
+  <failCheck wx:if="{{checkBool}}" typeName="{{popupName}}" bind:close="closeFn"></failCheck>
 </view>

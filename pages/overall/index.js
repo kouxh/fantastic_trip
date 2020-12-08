@@ -65,7 +65,7 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
-   that.getShow();// //获取首页信息
+   
   },
   // 点击图标
   iconFn(e){
@@ -168,6 +168,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+   
    // if (typeof this.getTabBar === 'function' &&
     //     this.getTabBar()) {
     //     this.getTabBar().setData({
@@ -175,6 +176,7 @@ Page({
     //     })
     //   }
       let that = this;
+      that.getShow();// //获取首页信息
       //抖动相关的
         setTimeout(function(){
           that.setData({

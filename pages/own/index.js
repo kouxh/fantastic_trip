@@ -23,7 +23,6 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
-    that.getShow();
   },
   //获取首页信息
   getShow(){
@@ -34,6 +33,7 @@ Page({
         }).then(res=>{
           if (res.errCode == 200){
             let isHeadline = res.data.user_follow.find(c=>c.un_cid == 1);
+            
             if(isHeadline){
               that.setData({
                 isHeadline:false
@@ -107,7 +107,6 @@ Page({
 
    // 点击图标
    iconFn(e){
-    console.log(e,'--own-----------')
     this.getUserStatus(e.currentTarget.dataset.id,e.currentTarget.dataset.name)
   },
   //用户每个分类下的状态
@@ -156,7 +155,8 @@ Page({
    */
   onShow: function () {
     let that = this;
- 
+    that.getShow();// //获取首页信息
+
       //抖动相关的
         setTimeout(function(){
           that.setData({

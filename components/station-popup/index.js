@@ -17,9 +17,6 @@ Component({
   methods: {
     //关闭弹层
     closeMask(){
-      // this.setData({
-      //   stationShow:false
-      // })
       // close 是自定义名称事件，父组件中监听使用
       this.triggerEvent('stationClose',{ stationShow: false } )
     },

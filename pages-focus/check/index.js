@@ -5,20 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    typeName:'',//跳转参数
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options,'---------')
+    if(options.name){
+      this.setData({
+        typeName:options.name
+      })
+    }
 
   },
   //返回按钮
   backFn(){
-    wx.navigateBack({
-      delta: 2
-    })
+    if(this.data.typeName){
+      wx.navigateBack({
+        delta: 2
+      })
+    }else{
+      wx.navigateBack({
+        delta: 1
+      })
+    }
+    
   },
   //下一步
   nextFn(){
@@ -51,9 +64,9 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    wx.navigateBack({
-      delta: 2
-    })
+    // wx.navigateBack({
+    //   delta: 2
+    // })
   },
 
   /**

@@ -12,7 +12,6 @@ Page({
     var isWxWork = false;
     wx.getSystemInfo({
       success(res) {
-        console.log(res.environment,'----------');
         isWxWork = res.environment == 'wxwork';
         if (!isWxWork) {
             // 当前环境不是企业微信，怎么处理你随便

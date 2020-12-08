@@ -24,9 +24,6 @@ Component({
   methods: {
     //关闭弹层
     closeMask(){
-      // this.setData({
-      //   changeShow:false
-      // })
       let myEventDetail = { // 需要传递什么数据就在这个对象中写
         changeShow: false
       }

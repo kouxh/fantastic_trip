@@ -17,9 +17,6 @@ Component({
   methods: {
     //关闭弹层
     closeMask(){
-      // this.setData({
-      //   developShow:false
-      // })
       this.triggerEvent('developClose',{ developShow: false } )
     },
     //点击去修改跳转

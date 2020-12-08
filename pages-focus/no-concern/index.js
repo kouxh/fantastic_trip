@@ -14,6 +14,8 @@ Page({
     classId:'',//类型id
     isPopup:'',//是否从弹层跳转
     modeType:'ins',//ins提交 up 修改
+    popupName:'',//审核失败弹层类型名
+    checkBool:false,//审核失败弹框
   },
 
   /**
@@ -75,6 +77,12 @@ Page({
       })
     }
   },
+    // 获取子组件传递过来的数据
+    closeFn(data){
+      this.setData({
+        checkBool:data.detail.changeShow
+      })
+    },
     //返回按钮
   backFn(){
       if(this.data.isPopup){
@@ -122,18 +130,32 @@ Page({
           mode:that.data.modeType
         }).then(res=>{
           if(res.errCode == 200){
-            
             // 1审核中 2审核成功 3审核失败
             if(res.data.status==1){
               wx.showToast({ title: '提交成功,审核中', icon: "none" });
-            }
-            setTimeout(() => {
+              setTimeout(() => {
+                wx.navigateTo({
+                  url: `/pages-focus/check/index?name=${this.data.typeName}`,
+                })
+              }, 1000);
+            }else if(res.data.status==2){
               wx.navigateTo({
-                url: `/pages-focus/check/index?name=${this.data.typeName}`,
+                url: `/pages-focus/pass-check/index?name=${this.data.typeName}`,
               })
-            }, 1000);
+            }
+            else if(res.data.status==3){
+              wx.showToast({ title: '审核失败', icon: "none" });
+              setTimeout(() => {
+                this.setData({
+                  checkBool:true,
+                  popupName:this.data.typeName
+                })
+              }, 1000);
+              
+            }
+            
           }else if (res.errCode == 40035){
-                wx.showToast({ title: '等待审核', icon: "none" });
+            wx.showToast({ title: '等待审核', icon: "none" });
           }else if (res.errCode == 40001){
            wx.showToast({ title: '参数为空', icon: "none" });
           } else if (res.errCode == 40030){

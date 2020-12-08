@@ -59,13 +59,9 @@ Page({
     setInterval(function () {
       //2: 调用动画实例方法来描述动画
       if (next) {
-        // animation.translateX(2).step();
-        // animation.rotate(4).step()
         this.animation.rotateY(-10).scale(1.2, 1.2).step()
         next = !next;
       } else {
-        // animation.translateX(-2).step();
-        // animation.rotate(-4).step()
         this.animation.rotate(0).scale(1, 1).step()
         next = !next;
       }

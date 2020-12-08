@@ -4,13 +4,11 @@
     <view class="tooltip">
       <image src="{{util.setImgUrl}}/assets/img/icon/tooltip.png" mode='aspectFill' alt="" class="img"></image>
     </view>
-    <!-- <view class="suspend">悬浮</view> -->
     <view class="each-icon {{isDoudong?'topImage':''}}" bindtap="stationFn">
       <image src="{{util.setImgUrl}}/assets/img/icon/all.png" mode='aspectFill' alt="" class="img"></image>
       <view class="num">{{getShowData.all}}</view>
     </view>
     <view wx:for="{{showData}}" wx:key="index" wx:for-item="item" wx:for-index="index">
-      <!-- <view  wx:for="{{getShowData.user_follow}}" wx:for-item="it" wx:for-index="in" wx:key="in" > -->
         <view class="{{item.className}} {{isDoudong?'topImage':''}}" catchtap="iconFn"  data-name='{{item.dataName}}' data-id="{{item.id}}">
           <image src="{{util.setImgUrl}}/{{item.img}}" mode='aspectFill' alt="" class="img"></image>
           <view class="{{item.classNum}}" wx:if='{{item.id==1}}'>{{getShowData.toutiao}}</view>
@@ -19,8 +17,6 @@
           <view class="{{item.classNum}}" wx:if='{{item.id==4}}'>{{getShowData.ximalaya}}</view>
           <view class="{{item.classNum}}" wx:if='{{item.id==5}}'>{{getShowData.weixinshipinhao}}</view>
         </view>
-      <!-- </view> -->
-      
     </view>
     
     <!-- <view class="headline-icon {{isDoudong?'topImage':''}}" catchtap="iconFn"  data-name='头条号' data-type="4">
@@ -41,6 +37,10 @@
     </view> -->
     <view class="wait-icon {{isDoudong?'topImage':''}}" catchtap="developFn">
       <image src="{{util.setImgUrl}}/assets/img/icon/wait.png" mode='aspectFill' alt="" class="img"></image>
+    </view>
+    <view class="total">
+      <image src="/assets/img/total.png" mode='aspectFill' alt="" class="img"></image>
+      <view class="total-num">累计参与:{{getShowData.users_num}}人</view>
     </view>
     <view class="text-box">
       <view class="each">

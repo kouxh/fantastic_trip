@@ -163,20 +163,18 @@ page {
   70% {transform: scale(1.2,1.2);}
   100% {transform: scale(1,1);}
   }
-  .suspend{
-    position: fixed;
-  top: 275rpx;
-  right: 0rpx;
-  z-index: 120;
-  box-sizing: border-box;
-  text-align: center;
-  background-color: #f70;
-  color: #fff;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  border-top-left-radius: 26rpx;
-  border-bottom-left-radius: 26rpx;
-  padding: 12rpx 14rpx 10rpx 26rpx;
-  font-size: 24rpx;
+  .total{
+    position: absolute;
+    bottom: 27%;
+    left: 13%;
+    width: 260rpx;
+    height: 56rpx;
+  }
+  .total-num{
+    font-size: 20rpx;
+    color: #9e6a43;
+    position: absolute;
+    top: 12rpx;
+    left: 62rpx;
+
   }
