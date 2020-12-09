@@ -46,9 +46,9 @@
 		</view>
 		<view wx:if="{{typeName=='喜马拉雅号'}}">
 			<view class="frame" >
-				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/94c53a45b80547649cb7db1a7bcba7a3/1lv_0_20201130170339xima.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>
+				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/ee42af192a9f40e9acbf33a60725ac3f/1xima_20201204142610.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>
 			</view>
-			<view class="step">打开喜马拉雅 > 输入：元年科技  > 点击“关注”</view>
+			<view class="step">打开喜马拉雅 > 输入：元年科技 > 选择：主播 > 点击账号关注</view>
 		</view>
 		<view wx:if="{{typeName=='视频号'}}">
 			<view class="frame" >

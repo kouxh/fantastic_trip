@@ -64,15 +64,15 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    if(this.data.typeName){
-      wx.navigateBack({
-        delta: 2
-      })
-    }else{
-      wx.navigateBack({
-        delta: 1
-      })
-    }
+    // if(this.data.typeName){
+    //   wx.navigateBack({
+    //     delta: 2
+    //   })
+    // }else{
+    //   wx.navigateBack({
+    //     delta: 1
+    //   })
+    // }
   },
 
   /**

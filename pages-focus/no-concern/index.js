@@ -13,7 +13,7 @@ Page({
     model:false,//不同机型
     classId:'',//类型id
     isPopup:'',//是否从弹层跳转
-    modeType:'ins',//ins提交 up 修改
+    modeType:'ins',//ins提交 up修改
     popupName:'',//审核失败弹层类型名
     checkBool:false,//审核失败弹框
   },

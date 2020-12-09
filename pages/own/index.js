@@ -148,6 +148,10 @@ Page({
                   typeName:name
                 })
               }
+          }else if(res.errCode == 40003){
+            wx.navigateTo({
+              url: '/pages-focus/no-concern/index?name='+ name,
+            })
           }else{
            wx.showToast({ title: res.errMsg, icon: "none" });
           }
