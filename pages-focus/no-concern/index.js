@@ -41,41 +41,67 @@ Page({
       }
     })
     if(options.name=="抖音号"){
-      that.setData({
-        typeName:options.name,
-        bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-trill.png',
-        circleColor:'#ff62dc',
-        classId:2
-      })
+      that.data.typeName=options.name;
+      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-trill.png';
+      that.data.circleColor='#ff62dc';
+      that.data.classId=2;
+      // that.setData({
+      //   typeName:options.name,
+      //   bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-trill.png',
+      //   circleColor:'#ff62dc',
+      //   classId:2
+      // })
     }else if(options.name=="头条号"){
-      that.setData({
-        typeName:options.name,
-        bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-headline.png',
-        circleColor:'#ff5e4d',
-        classId:1
-      })
+      that.data.typeName=options.name;
+      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-headline.png';
+      that.data.circleColor='#ff5e4d';
+      that.data.classId=1;
+      // that.setData({
+      //   typeName:options.name,
+      //   bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-headline.png',
+      //   circleColor:'#ff5e4d',
+      //   classId:1
+      // })
     }else if(options.name=="知乎号"){
-      that.setData({
-        typeName:options.name,
-        bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-zhihu.png',
-        circleColor:'#16a5ff',
-        classId:3
-      })
+      that.data.typeName=options.name;
+      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-zhihu.png';
+      that.data.circleColor='#16a5ff';
+      that.data.classId=3;
+      // that.setData({
+      //   typeName:options.name,
+      //   bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-zhihu.png',
+      //   circleColor:'#16a5ff',
+      //   classId:3
+      // })
     }else if(options.name=="视频号"){
-      that.setData({
-        typeName:options.name,
-        bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-video.png',
-        circleColor:'#ff8519',
-        classId:5
-      })
+      that.data.typeName=options.name;
+      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-video.png';
+      that.data.circleColor='#ff8519';
+      that.data.classId=5;
+      // that.setData({
+      //   typeName:options.name,
+      //   bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-video.png',
+      //   circleColor:'#ff8519',
+      //   classId:5
+      // })
     }else if(options.name=="喜马拉雅号"){
-      that.setData({
-        typeName:options.name,
-        bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-himalaya.png',
-        circleColor:'#eb3f3f',
-        classId:4
-      })
+      that.data.typeName=options.name;
+      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-himalaya.png';
+      that.data.circleColor='#eb3f3f';
+      that.data.classId=4;
+      // that.setData({
+      //   typeName:options.name,
+      //   bottomImg:'https://march.yuanian.com/static/assets/img/icon/focus-himalaya.png',
+      //   circleColor:'#eb3f3f',
+      //   classId:4
+      // })
     }
+     that.setData({
+        typeName:that.data.typeName,
+        bottomImg: that.data.bottomImg,
+        circleColor:that.data.circleColor,
+        classId:that.data.classId
+      })
   },
     // 获取子组件传递过来的数据
     closeFn(data){
@@ -133,11 +159,11 @@ Page({
             // 1审核中 2审核成功 3审核失败
             if(res.data.status==1){
               wx.showToast({ title: '提交成功,审核中', icon: "none" });
-              setTimeout(() => {
+              // setTimeout(() => {
                 wx.navigateTo({
                   url: `/pages-focus/check/index?name=${this.data.typeName}`,
                 })
-              }, 1000);
+              // }, 1000);
             }else if(res.data.status==2){
               wx.navigateTo({
                 url: `/pages-focus/pass-check/index?name=${this.data.typeName}`,
@@ -205,10 +231,11 @@ Page({
       prevPage.setData({ //把需要回传的值保存到上一个页面
         close: "true"
       });
+      wx.navigateBack({
+        delta: 1
+      })
     }
-    wx.navigateBack({
-      delta: 1
-    })
+    
 
   },
 

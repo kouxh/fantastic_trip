@@ -28,12 +28,12 @@ Page({
           if(res.errCode == 200){
             wx.showToast({ title: '提交成功', icon: "none" });
             setTimeout(() => {
-              wx.navigateTo({
+              wx.redirectTo({
                 url: '/pages-focus/success/index',
               })
-            }, 1000);
-          }else if(res.errCode == 40009){
-            wx.showToast({ title: "已提交过宝贵意见！", icon: "none" });
+            }, 500);
+          }else if(res.errCode == 40010){
+            wx.showToast({ title: "已提交成功，请五分钟后再提交吧！", icon: "none" });
           }else{
             wx.showToast({ title:res.errMsg, icon: "none" });
           }

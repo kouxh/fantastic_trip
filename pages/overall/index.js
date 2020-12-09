@@ -140,10 +140,12 @@ Page({
             that.setData({
               getShowData:res.data
             })
-            if(res.data.user_follow.length>=5){
+            let isDevelop=wx.getStorageSync('isDevelop');
+            if(res.data.user_follow.length==5 && isDevelop==''){
                 that.setData({
                   developBool:true
                 })
+              wx.setStorageSync('isDevelop',true)
             }
           }else{
            wx.showToast({ title: res.errMsg, icon: "none" });
@@ -168,13 +170,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-   
-   // if (typeof this.getTabBar === 'function' &&
-    //     this.getTabBar()) {
-    //     this.getTabBar().setData({
-    //       selected: 0
-    //     })
-    //   }
       let that = this;
       that.getShow();// //获取首页信息
       //抖动相关的

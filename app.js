@@ -5,9 +5,13 @@ App({
   onLaunch: function () {
     let that=this;
     let token=wx.getStorageSync('token');
+    let isDevelop=wx.getStorageSync('isDevelop');
     wx.clearStorageSync(); // 首次进入，清除缓存
     if (token) {
       setStorage('token', token, that);
+    }
+    if (isDevelop) {
+      setStorage('isDevelop', isDevelop, that);
     }
     // 展示本地存储能力
     // wx.setStorageSync('logs', logs)

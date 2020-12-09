@@ -33,36 +33,47 @@ Page({
         }).then(res=>{
           if (res.errCode == 200){
             let isHeadline = res.data.user_follow.find(c=>c.un_cid == 1);
-            
             if(isHeadline){
-              that.setData({
-                isHeadline:false
-              })
+              that.data.isHeadline=false;
+              // that.setData({
+              //   isHeadline:false
+              // })
             }
             let isTrill = res.data.user_follow.find(c=>c.un_cid == 2);
             if(isTrill) {
-              that.setData({
-                isTrill:false
-              })
+              that.data.isTrill=false;
+              // that.setData({
+              //   isTrill:false
+              // })
             }
             let isZhihu = res.data.user_follow.find(c=>c.un_cid == 3);
             if(isZhihu){
-              that.setData({
-                isZhihu:false
-              })
+              that.data.isZhihu=false;
+              // that.setData({
+              //   isZhihu:false
+              // })
             }
             let isHimalaya = res.data.user_follow.find(c=>c.un_cid == 4);
             if(isHimalaya){
-              that.setData({
-                isHimalaya:false
-              })
+              that.data.isHimalaya=false;
+              // that.setData({
+              //   isHimalaya:false
+              // })
             }
             let isVideo = res.data.user_follow.find(c=>c.un_cid == 5);
             if(isVideo){
-              that.setData({
-                isVideo:false
-              })
+              that.data.isVideo=false;
+              // that.setData({
+              //   isVideo:false
+              // })
             }
+            that.setData({
+                isHeadline:that.data.isHeadline,
+                isTrill:that.data.isTrill,
+                isZhihu:that.data.isZhihu,
+                isHimalaya:that.data.isHimalaya,
+                isVideo:that.data.isVideo
+              })
             if(res.data.user_follow.length>=5){
                 that.setData({
                   isDevelop:false,
