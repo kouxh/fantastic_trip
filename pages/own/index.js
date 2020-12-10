@@ -81,7 +81,7 @@ Page({
                   // developBool:true
                 })
             }
-          }else if(response.errCode==40002){
+          }else if(res.errCode==40002){
             wx.showToast({
               title: "登录失败，请重新登录",
               icon: "none"
