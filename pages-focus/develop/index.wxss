@@ -41,14 +41,14 @@ page {
   
 }
 .textArea-box{
-  width: 558rpx;
+  width: 540rpx;
   height: 224rpx;
   background-color: #fffcf6;
   border-radius: 12rpx;
   border: solid 2rpx #ff7800;
   position: absolute;
   top: 770rpx;
-  left: 80rpx;
+  left: 96rpx;
   padding: 10rpx;
 
 }

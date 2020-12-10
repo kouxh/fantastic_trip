@@ -74,12 +74,20 @@ Page({
                 isHimalaya:that.data.isHimalaya,
                 isVideo:that.data.isVideo
               })
-            if(res.data.user_follow.length>=5){
+              console.log(that.data.isHeadline,that.data.isTrill,that.data.isZhihu,that.data.isVideo,that.data.isHimalaya,'------')
+            if(res.data.user_follow.length==5){
                 that.setData({
                   isDevelop:false,
                   // developBool:true
                 })
             }
+          }else if(response.errCode==40002){
+            wx.showToast({
+              title: "登录失败，请重新登录",
+              icon: "none"
+            });
+            wx.removeStorageSync('token');
+            return wx.reLaunch({ url: '/pages/index/index' })
           }else{
            wx.showToast({ title: res.errMsg, icon: "none" });
           }

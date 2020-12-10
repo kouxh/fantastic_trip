@@ -146,12 +146,24 @@ Page({
               getShowData:res.data
             })
             let isDevelop=wx.getStorageSync('isDevelop');
+            console.log(isDevelop,'-isDevelop-1--')
+            if(res.data.user_follow.length ==0 && isDevelop!=''){
+              console.log(isDevelop,'isDevelop---2--------')
+              wx.removeStorageSync('isDevelop','---3-');
+            }
             if(res.data.user_follow.length==5 && isDevelop==''){
                 that.setData({
                   developBool:true
                 })
               wx.setStorageSync('isDevelop',true)
             }
+          }else if(response.errCode==40002){
+            wx.showToast({
+              title: "登录失败，请重新登录",
+              icon: "none"
+            });
+            wx.removeStorageSync('token');
+            return wx.reLaunch({ url: '/pages/index/index' })
           }else{
            wx.showToast({ title: res.errMsg, icon: "none" });
           }

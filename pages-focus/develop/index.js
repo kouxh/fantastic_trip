@@ -34,6 +34,11 @@ Page({
             }, 500);
           }else if(res.errCode == 40010){
             wx.showToast({ title: "已提交成功，请五分钟后再提交吧！", icon: "none" });
+            setTimeout(() => {
+              wx.navigateBack({
+                delta: 1
+              })
+            }, 2000);
           }else{
             wx.showToast({ title:res.errMsg, icon: "none" });
           }

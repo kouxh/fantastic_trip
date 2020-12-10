@@ -22,6 +22,7 @@ Page({
             return;
         }else{
           if(wx.getStorageSync('token')=='' || wx.getStorageSync('token')==undefined){
+            console.log(wx.getStorageSync('token'),'----授权-----')
              wx.qy.login({
               success: function(res) {
                 console.log(res.code,'--------index-----------')
@@ -53,9 +54,6 @@ Page({
                           title: res.data.errMsg,
                           icon: "none"
                         });
-                        // wx.switchTab({
-                        //   url: '/pages/overall/index',
-                        // })
                       }
                     }
                   })
@@ -67,7 +65,6 @@ Page({
                 console.log(res,'获取code失败')
               }
             });
-          
           }else{
             wx.switchTab({
               url: '/pages/overall/index',
@@ -81,29 +78,7 @@ Page({
     
   },
   onLoad: function () {
-  // //添加音效
-    // const innerAudioContext = wx.createInnerAudioContext()
-    // innerAudioContext.autoplay = true  // 是否自动开始播放，默认为 false
-    // innerAudioContext.loop =false  // 是否循环播放，默认为 false
-    // // wx.setInnerAudioOption({ // ios在静音状态下能够正常播放音效
-    // //   obeyMuteSwitch: false,   // 是否遵循系统静音开关，默认为 true。当此参数为 false 时，即使用户打开了静音开关，也能继续发出声音。
-    // //   success: function(e) {
-    // //     console.log(e)
-    // //     console.log('play success')
-    // //   },
-    // //   fail: function(e) {
-    // //     console.log(e)
-    // //     console.log('play fail')
-    // //   }
-    // // })
-    // innerAudioContext.src = 'http://resource.deiyou.net/deiyoudian/ycfJoVKYqvNIY3xIGEfhDh27dkd2AKBROGWVtG8NFeSVKV4WHuXvz35JpfruPfnvIwUE6ENk8RK3LZi0BpkOujpCHjshhb2etPe1/15757096630moCk.mp3';  // 音频资源的地址
-    // innerAudioContext.onPlay(() => {  // 监听音频播放事件
-    //   console.log('开始播放')
-    // })
-    // innerAudioContext.onError((res) => { // 监听音频播放错误事件
-    //   console.log(res.errMsg)
-    //   console.log(res.errCode)
-    // })
+  
   },
 
   /**

@@ -168,14 +168,14 @@ page {
     bottom: 27%;
     left: 13%;
     width: 260rpx;
-    height: 56rpx;
-    line-height: 56rpx;
+    height: 54rpx;
+    line-height: 48rpx;
   }
   .total-num{
     font-size: 20rpx;
     color: #9e6a43;
     position: absolute;
-    top: -2rpx;
+    top: -0rpx;
     left: 62rpx;
 
   }
