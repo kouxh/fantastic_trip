@@ -1,0 +1,46 @@
+<wxs src="../../utils/utils.wxs" module="util" />
+ <view class="pages-integral-list-index">
+  <navigator  class="back-btn" open-type='navigateBack' delta='{{1}}'>
+		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
+	</navigator>
+		<view class="list-header">
+			 <image src="{{util.setImgUrl}}/assets/img/icon/deal-header.png" mode='aspectFill' alt="" class="img"></image>
+		</view>
+		<view class="integral-usable-content">
+			<view class="content-box-load" wx:if="{{listShowType==0}}">
+				<van-loading type="spinner"/>
+			</view>
+			<view class="content-box" wx:if="{{listShowType==1}}">
+					<view class="every-list index" wx:for="{{getListArr}}" wx:key="index" animation="{{slide_up1}}" wx:if="item.gd_img !=''">
+						<view class="list-left">
+							<image mode='aspectFill' src='{{util.networkImgUrl}}{{item.gd_img}}' alt class="img" />
+						</view>
+						<view class="list-right">
+							<view class="right-up ellipsis2row">{{item.gd_name}}</view>
+							<view class="right-bottom">
+								<view class="left">
+									<image mode='aspectFill' src="{{util.setImgUrl}}/assets/img/icon/jifen.png" alt class="icon-img" />
+									<view>{{item.gd_integral}}积分</view>
+								</view>
+							</view>
+							<view class="right-bottom">
+								<view class="left">
+									<image mode='aspectFill' src="{{util.setImgUrl}}/assets/img/icon/shijian.png" alt class="icon-img" />
+									<view>兑换时间：{{item.god_creatime}}</view>
+								</view>
+							</view>
+						</view>
+					</view>
+			</view>
+			<view  wx:if="{{listShowType==2}}">
+				<view class="nomsg-img-box">
+					<image mode='aspectFill' src="{{util.setImgUrl}}/assets/img/icon/none.png" alt class="none-img" />
+					<view class="none-bg"></view>
+				</view>
+			</view>
+		</view>
+		<view class="list-bottom" >
+			 <image src="{{util.setImgUrl}}/assets/img/icon/deal-dase.png" mode='aspectFill' alt="" class="img"></image>
+		</view>
+	
+</view>

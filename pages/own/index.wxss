@@ -16,11 +16,11 @@ page {
 }
 
 .each-icon {
-  width: 124rpx;
-  height: 120rpx;
+  width: 130rpx;
+  height: 152rpx;
   position: absolute;
-  top: 32%;
-  left: 186rpx;
+  top: 30%;
+  left: 170rpx;
   z-index: 99;
 }
 
@@ -110,15 +110,11 @@ page {
 }
 
 .all-integral {
-  left: 108rpx;
-}
-
-.confirm-integral {
-  left: 244rpx;
+  left: 150rpx;
 }
 
 .wait-confirm-integral {
-  right: 248rpx;
+  right: 306rpx;
 }
 
 .exchange-btn {

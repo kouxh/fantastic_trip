@@ -2,7 +2,8 @@
   "usingComponents": {
     "failCheck": "/components/fail-check/index",
     "develop-popup":"/components/develop-popup/index",
-    "station-popup":"/components/station-popup/index"
+    "station-popup":"/components/station-popup/index",
+    "problem-popup":"/components/problem-popup/index"
 
   }
 }

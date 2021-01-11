@@ -22,7 +22,7 @@
 				<image src="{{util.setImgUrl}}/assets/img/icon/submit.png" mode='aspectFill' alt="" class="img"></image>
 			</view>
 		</view>
-		<view class="tip"><text class="infuse">注：</text>你所提交的账号必须真正关注了元年的{{typeName}}，否则通过审核后，未关注的账号将视为无效。</view>
+		<view class="tip"><text class="infuse">注：</text>每过一关得20积分，你所提交的账号必须真正关注了元年的{{typeName}}，否则审核后将视为无效</view>
 		<view wx:if="{{typeName=='头条号'}}">
 			<view class="frame" >
 				<video class="video" src="https://yn-200702out.oss-cn-hangzhou.aliyuncs.com/Act-ss-mp4-hd/6a63baf36cd0425b8497f6e49793ae25/1lv_0_20201130165726toutiao.mp4" autoplay="{{true}}" loop="{{true}}" object-fit='fill'></video>

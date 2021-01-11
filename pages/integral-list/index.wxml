@@ -1,0 +1,64 @@
+ <wxs src="../../utils/utils.wxs" module="util" />
+ <view class="pages-integral-list-index">
+	
+		<view class="list-header">
+			 <image src="{{util.setImgUrl}}/assets/img/icon/header.png" mode='aspectFill' alt="" class="img"></image>
+		</view>
+		<view  class="change-btn" bindtap="backFn">
+		<image src="{{util.setImgUrl}}/assets/img/icon/change-btn.png" mode='aspectFill' alt="" class="img"></image>
+	</view>
+
+		<view class="integral-usable-content">
+			<view class="content-box-load" wx:if="{{listShowType==0}}">
+				<!-- <van-loading class="load" /> -->
+				<van-loading type="spinner"></van-loading>
+			</view>
+			<view class="content-box" wx:if="{{listShowType==1}}">
+					<view class="every-list index" wx:for="{{getListArr}}" wx:key="index" animation="{{slide_up1}}">
+						<view class="list-left">
+							<image mode='aspectFill' src='{{util.networkImgUrl}}{{item.gd_img}}' alt class="img" />
+						</view>
+						<view class="list-right">
+							<view class="right-up ellipsis2row">{{item.gd_name}}</view>
+							<view class="right-bottom">
+								<view class="left">
+									<image mode='aspectFill' src="{{util.setImgUrl}}/assets/img/icon/integral-icon.png" alt class="icon-img" />
+									<view>{{item.gd_integral}}积分</view>
+								</view>
+							</view>
+							<view class="right-bottom">
+								<view class="left">
+									<image mode='aspectFill' src="{{util.setImgUrl}}/assets/img/icon/stock.png" alt class="icon-img" />
+									<view >库存{{item.gd_num}}件</view>
+								</view>
+								<view class="right" data-id="{{item.gd_id}}" data-status="{{item.gd_status}}" bindtap="exchangeFn">
+									<image mode='aspectFill' src="{{util.setImgUrl}}/assets/img/icon/exchange-icon.png" alt class="img" />
+								</view>
+							</view>
+						</view>
+					</view>
+					<view class="tip-bg">更多礼品 敬请期待</view>
+			</view>
+			<view  wx:if="{{listShowType==2}}">
+				<view class="nomsg-img-box">
+					<image mode='aspectFill' src="{{util.setImgUrl}}/assets/img/icon/none.png" alt class="none-img" />
+					<!-- <view class="none-bg"></view> -->
+				</view>
+			</view>
+		</view>
+		<view class="list-bottom">
+			 <image src="{{util.setImgUrl}}/assets/img/base-img.jpg" mode='aspectFill' alt="" class="img"></image>
+		</view>
+		<van-popup show="{{ exchangeShow }}" bind:close="onClose" close-on-click-overlay="{{false}}" catchtouchmove="true">
+			<image src="{{util.setImgUrl}}/assets/img/icon/popup-person.png" mode='aspectFill' alt="" class="person-img"></image>
+				<view class="popup-box">
+			 	   <image src="{{util.setImgUrl}}/assets/img/icon/popup-floor.png" mode='aspectFill' alt="" class="img"></image>
+						<view class="title">是否确认兑换</view>
+						<view class="btn-box">
+							 <image bindtap="onClose" src="{{util.setImgUrl}}/assets/img/icon/cancel.png" mode='aspectFill' alt="" class="img-btn"></image>
+							 <image bindtap="confirmFn" src="{{util.setImgUrl}}/assets/img/icon/affirm.png" mode='aspectFill' alt="" class="img-btn"></image>
+						</view>
+				</view>
+			
+		</van-popup>
+</view>

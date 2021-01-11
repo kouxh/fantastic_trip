@@ -1,12 +1,12 @@
  <wxs src="../../utils/utils.wxs" module="util" />
  <view class="pages-overall-index">
     <image src="{{util.setImgUrl}}/assets/img/overall-bg.jpg"  mode="scaleToFill" alt="" class="img"></image>
-    <view class="tooltip">
+    <!-- <view class="tooltip">
       <image src="{{util.setImgUrl}}/assets/img/icon/tooltip.png" mode='aspectFill' alt="" class="img"></image>
-    </view>
-    <view class="each-icon {{isDoudong?'topImage':''}}" bindtap="stationFn">
-      <image src="{{util.setImgUrl}}/assets/img/icon/all.png" mode='aspectFill' alt="" class="img"></image>
-      <view class="num">{{getShowData.all}}</view>
+    </view> -->
+    <view class="each-icon" bindtap="stationFn">
+      <image src="{{util.setImgUrl}}/assets/img/icon/base.png" mode='aspectFill' alt="" class="img"></image>
+      <!-- <view class="num">{{getShowData.all}}</view> -->
     </view>
     <view wx:for="{{showData}}" wx:key="index" wx:for-item="item" wx:for-index="index">
         <view class="{{item.className}} {{isDoudong?'topImage':''}}" catchtap="iconFn"  data-name='{{item.dataName}}' data-id="{{item.id}}">
@@ -18,23 +18,6 @@
           <view class="{{item.classNum}}" wx:if='{{item.id==5}}'>{{getShowData.weixinshipinhao}}</view>
         </view>
     </view>
-    
-    <!-- <view class="headline-icon {{isDoudong?'topImage':''}}" catchtap="iconFn"  data-name='头条号' data-type="4">
-      <image src="{{util.setImgUrl}}/assets/img/icon/headline.png" mode='aspectFill' alt="" class="img"></image>
-      <view class="headline-num">{{getShowData.toutiao}}</view>
-    </view> -->
-    <!-- <view class="zhihu-icon {{isDoudong?'topImage':''}}" catchtap="iconFn" data-name='视频号' data-type="2">
-      <image src="{{util.setImgUrl}}/assets/img/icon/video.png" mode='aspectFill' alt="" class="img"></image>
-      <view class="video-num">{{getShowData.weixinshipinhao}}</view>
-    </view>
-    <view class="video-icon {{isDoudong?'topImage':''}}" catchtap="iconFn" data-name="知乎号" data-type="3">
-      <image src="{{util.setImgUrl}}/assets/img/icon/zhihu.png" mode='aspectFill' alt="" class="img"></image>
-      <view class="zhihu-num">{{getShowData.zhihu}}</view>
-    </view>
-    <view class="himalaya-icon {{isDoudong?'topImage':''}}" catchtap="iconFn" data-name="喜马拉雅号" data-type="4">
-      <image src="{{util.setImgUrl}}/assets/img/icon/himalaya.png" mode='aspectFill' alt="" class="img"></image>
-      <view class="himalaya-num">{{getShowData.ximalaya}}</view>
-    </view> -->
     <view class="wait-icon {{isDoudong?'topImage':''}}" catchtap="developFn">
       <image src="{{util.setImgUrl}}/assets/img/icon/wait.png" mode='aspectFill' alt="" class="img"></image>
     </view>
@@ -42,22 +25,34 @@
       <image src="/assets/img/total.png" mode='aspectFill' alt="" class="img"></image>
       <view class="total-num">累计参与:{{getShowData.users_num}}人</view>
     </view>
+    <view class="problem-box" bindtap="problemFn">
+         <image src="{{util.setImgUrl}}/assets/img/icon/feedback.png" mode='aspectFill' alt="" class="img"></image>
+    </view>
     <view class="text-box">
       <view class="each">
         <view class="circle">01</view>
-        <view class="text">旅途共5站，<text class="point">点击对应站点</text>，根据视频指示，参与活动</view>
+        <view class="text">闯关：共五关，<text class="point">点击各关卡，根据提示</text>，轻松闯关</view>
+        <!-- <view class="text">旅途共5站，<text class="point">点击对应站点</text>，根据视频指示，参与活动</view> -->
       </view>
       <view class="each">
         <view class="circle">02</view>
-        <view class="text"><text class="point">参与顺序：</text>先到<text class="point">各平台</text>关注元年账号，<text class="point">再提交</text>你的账号昵称</view>
+        <view class="text">积分：每关可得<text class="point">20积分</text>，过关后需<text class="point">再点一下</text>关卡，转换关卡状态</view>
+        <!-- <view class="text"><text class="point">参与顺序：</text>先到<text class="point">各平台</text>关注元年账号，<text class="point">再提交</text>你的账号昵称</view> -->
       </view>
       <view class="each">
-        <view class="circle three">03</view>
-        <view class="text">账号提交后，会有审核期，审核通过后，积分会<text class="point">计入</text>你的账户，积分兑礼上线,即可凭借积分<text class="point">兑换奖品</text></view>
+        <view class="circle">03</view>
+        <view class="text">审核：任务提交后会有<text class="point">审核期</text>，审核通过才可获得积分</view>
+        <!-- <view class="text">账号提交后，会有审核期，审核通过后，积分会<text class="point">计入</text>你的账户，积分兑礼上线,即可凭借积分<text class="point">兑换奖品</text></view> -->
       </view>
       <view class="each">
         <view class="circle">04</view>
-        <view class="text">特别提示：越早加入到活动中来，积分越多，惊喜越多呦</view>
+        <view class="text">注意：按照提示，<text class="point">先关注</text>元年账号，<text class="point">再提交</text>你的账号昵称</view>
+        <!-- <view class="text">特别提示：越早加入到活动中来，积分越多，惊喜越多呦</view> -->
+      </view>
+      <view class="each">
+        <view class="circle three">05</view>
+        <view class="text">特殊：系统若出现了判断失误，需要再提交一次。仍判断失误的，进行问题反馈</view>
+        <!-- <view class="text">特别提示：越早加入到活动中来，积分越多，惊喜越多呦</view> -->
       </view>
     </view>
     <!-- 审核失败弹出层 -->
@@ -66,4 +61,6 @@
   <develop-popup wx:if="{{developBool}}" bind:developClose="developClose"></develop-popup>
   <!-- 总站点弹层 -->
   <station-popup wx:if="{{stationBool}}" bind:stationClose="stationClose"></station-popup>
+  <!-- 问题反馈 -->
+  <problem-popup wx:if="{{problemBool}}" bind:problemClose="problemClose"></problem-popup>
   </view>

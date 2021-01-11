@@ -8,6 +8,7 @@ Page({
     checkBool:false,//审核失败弹框
     developBool:false,//开拓弹框
     stationBool:false,//点击总站弹框
+    problemBool:false,//问题反馈弹框
     getShowData:{},//获取数据
     typeName:'',//弹层类型名
     showData:[
@@ -41,7 +42,7 @@ Page({
       },
       {
         id:4,
-        img:'assets/img/icon/himalaya.png',
+        img:'assets/img/icon/himalaya(2).png',
         num:2,
         className:'himalaya-icon',
         classNum:'himalaya-num',
@@ -69,7 +70,6 @@ Page({
   },
   // 点击图标
   iconFn(e){
-    console.log(e,'----')
     this.getUserStatus(e.currentTarget.dataset.id,e.currentTarget.dataset.name)
   },
   //用户每个分类下的状态
@@ -122,10 +122,30 @@ Page({
       stationBool:data.detail.stationShow
     })
   },
+   // 点击问题反馈触发事件
+   problemFn(){
+    this.setData({
+      problemBool:!this.data.problemBool
+    })
+  },
+  //问题反馈弹框
+  problemClose(e){
+    this.setData({
+      problemBool:e.detail.problemShow
+    })
+  },
   // 开拓弹出层
   developClose(e){
     this.setData({
       developBool:e.detail.developShow
+    })
+    setTimeout(function(){
+      this.setData({
+        isDoudong: false
+      })
+    },3000)
+    this.setData({
+      isDoudong: true
     })
   },
    // 审核失败获取子组件传递过来的数据
@@ -190,6 +210,7 @@ Page({
       let that = this;
       that.getShow();// //获取首页信息
       //抖动相关的
+      if(that.data.developBool==false){
         setTimeout(function(){
           that.setData({
             isDoudong: false
@@ -198,6 +219,8 @@ Page({
         that.setData({
           isDoudong: true
         })
+      }
+        
         const pages = getCurrentPages()
         const currPage = pages[pages.length - 1]  // 当前页
         if (this.data.close=="true") {

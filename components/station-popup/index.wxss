@@ -28,7 +28,7 @@
 
 .bg-img {
   width: 624rpx;
-  height: 600rpx;
+  height: 535rpx;
 
 }
 
@@ -49,7 +49,9 @@
 }
 
 .text {
+  width: 80%;
   text-align: center;
+  margin-left: 8%;
 }
 
 .typeName {
@@ -83,7 +85,7 @@
   height: 62rpx;
   text-align: center;
   position: absolute;
-  top: 75%;
+  top: 72%;
   left: 45%;
 
 }
@@ -101,5 +103,5 @@
 	letter-spacing: 2rpx;
   color: #ec7b2d;
   text-align: center;
-  margin-top: 94rpx;
+  margin-top: 26rpx;
 }

@@ -8,7 +8,10 @@
     "custom-tab-bar/index",
     "components/fail-check/index",
     "components/develop-popup/index",
-    "components/station-popup/index"
+    "components/station-popup/index",
+    "pages/ranking-list/index",
+    "pages/integral-list/index",
+    "components/problem-popup/index"
   ],
   "subPackages": [
     {
@@ -18,7 +21,10 @@
         "check/index",
         "pass-check/index",
         "develop/index",
-        "success/index"
+        "success/index",
+        "record/index",
+        "rule/index",
+        "address/index"
       ]
     }
   ],
@@ -50,13 +56,13 @@
         "text": "我的行军图"
       },
       {
-        "pagePath": "pages/ranking/index",
+        "pagePath": "pages/ranking-list/index",
         "iconPath": "assets/img/icon/ranking.png",
         "selectedIconPath": "assets/img/icon/ranking.png",
         "text": "排行榜"
       },
       {
-        "pagePath": "pages/integral/index",
+        "pagePath": "pages/integral-list/index",
         "iconPath": "assets/img/icon/integral.png",
         "selectedIconPath": "assets/img/icon/integral.png",
         "text": "积分兑礼"
@@ -64,5 +70,10 @@
     ]
   },
   "debug": true,
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息仅用于收货地址和配送"
+    }
+  }
 }

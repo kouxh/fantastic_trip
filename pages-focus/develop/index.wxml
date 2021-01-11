@@ -1,7 +1,7 @@
 <wxs src="../../utils/utils.wxs" module="util" />
 <view class="pages-develop-index">
   <image src="{{util.setImgUrl}}/assets/img/develop-bg.jpg"  mode="scaleToFill" alt="" class="bg-img"></image>
-  <navigator open-type="navigateBack" hover-class="none" class="back-btn">
+  <navigator class="back-btn" open-type='navigateBack' delta='{{1}}'>
 		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
 	</navigator>
   <view class="title">你对网络营销推广有什么好的意见？

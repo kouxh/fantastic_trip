@@ -1,0 +1,28 @@
+<wxs src="../../utils/utils.wxs" module="util" />
+<view catchtouchmove="true">
+	<!-- 弹出层 -->
+	<view class="common_mask" show="{{problemShow}}">
+		<!-- 内容层 -->
+		<view class="mask_box">
+			<view class="content">
+				<view class="bg-box">
+					<image src="{{util.setImgUrl}}/assets/img/icon/question-popup.png" mode='aspectFill' alt="" class="bg-img"></image>
+					<view class="do-box">
+						<view class="name-box">
+							<view class="text">请在此处提交问题或者直接私信张玉静解决</view>
+              <view class="textArea-box">
+                <textarea placeholder=""  value='{{value}}' bindinput='inputValueFn' class='textarea'></textarea>
+              </view>
+						</view>
+						<view class="change-btn" bindtap="submitFn">
+							<image src="{{util.setImgUrl}}/assets/img/icon/question-btn.png" mode='aspectFill' alt="" class="img"></image>
+						</view>
+					</view>
+				</view>
+				<view class="close-box" catch:tap="closeMask">
+					<image class="close-img" src="http://img.deiyou.net/upload/seller/goods/image/2019/11/7/95fb1a0842a04fe98f559c9956e6489a.jpg" />
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

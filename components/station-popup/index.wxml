@@ -6,16 +6,10 @@
 		<view class="mask_box">
 			<view class="content">
 				<view class="bg-box">
-					<image src="{{util.setImgUrl}}/assets/img/icon/station-popup.png" mode='aspectFill' alt="" class="bg-img"></image>
+					<image src="{{util.setImgUrl}}/assets/img/icon/all-station.png" mode='aspectFill' alt="" class="bg-img"></image>
 					<view class="do-box">
 						<view class="name-box">
-							<view class="text">亲爱的元年人，欢迎加入元家军！</view>
-							<view class="text">点击各站点（次序无先后），</view>
-              <view class="text">根据<text class="typeName">视频指示</text>，即可参与活动呦。</view>
-							<view class="text">赢积分，兑大奖，速度速度！！！！</view>
-						</view>
-						<view class="change-btn" bindtap="closeMask">
-							<image src="{{util.setImgUrl}}/assets/img/icon/make.png" mode='aspectFill' alt="" class="img"></image>
+							<view class="text">欢迎加入元家军！<text class="typeName">点击各关卡</text>（次序无先后），根据关卡内<text class="typeName">提示</text>，即可开始闯关。每过一关可得<text class="typeName">20积分</text>，积分大奖<text class="typeName">先到先得</text>，速度！！</view>
 						</view>
             <view class="tip">下附“行军攻略”，先阅读再闯关，速度会更快呦！</view>
 					</view>

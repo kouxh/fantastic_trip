@@ -16,6 +16,7 @@ Page({
     isVideo:true,//控制视频是否遮罩
     isHimalaya:true,//控制喜马拉雅是否遮罩
     isDevelop:true,//待发展是否遮罩
+    getShowData:{},//获取总数据
   },
 
   /**
@@ -72,7 +73,8 @@ Page({
                 isTrill:that.data.isTrill,
                 isZhihu:that.data.isZhihu,
                 isHimalaya:that.data.isHimalaya,
-                isVideo:that.data.isVideo
+                isVideo:that.data.isVideo,
+                getShowData:res.data
               })
               console.log(that.data.isHeadline,that.data.isTrill,that.data.isZhihu,that.data.isVideo,that.data.isHimalaya,'------')
             if(res.data.user_follow.length==5){

@@ -1,0 +1,64 @@
+<wxs src="../../utils/utils.wxs" module="util" />
+<view class="pages-address-index">
+  <navigator class="back-btn" open-type='navigateBack' delta='{{1}}'>
+		<image src="{{util.setImgUrl}}/assets/img/icon/back.png" mode='aspectFill' alt="" class="img"></image>
+	</navigator>
+  <view class="title">
+  	<image src="{{util.setImgUrl}}/assets/img/icon/info.png" mode='aspectFill' alt="" class="img"></image>
+  </view>
+  <view class="address-box">
+    <view>
+        <view class='address-list'>
+          <view class='address-title'>收货人:</view>
+          <input class='address-ipt' type='text' value='{{editorName}}' bindinput='editorNameFn'  />
+        </view>
+      <view class='address-list'>
+        <view class='address-title'>联系方式：</view>
+        <input class='address-ipt' type='number' maxlength="{{11}}" value='{{editorMobile}}' bindinput='editorMobileFn' />
+      </view>
+      <view class='address-list' catchtap="areaFn">
+        <view class='address-title'>省市区：</view>
+        <input class='address-ipt' type='text' disabled value="{{areaStr}}"/>
+      </view>
+      <view class='address-list-textarea'>
+        <view class='address-title'>详细地址：</view>
+        <textarea auto-height wx:if='{{!showMask}}' class='address-textarea' type='text' value='{{editorDetailed}}' bindinput='editorDetailedFn' />
+      </view>
+    </view>
+    <view class="submit-btn" bindtap="upAddressVip">
+  	  <image src="{{util.setImgUrl}}/assets/img/icon/address-btn.png" mode='aspectFill' alt="" class="img"></image>
+    </view>
+  </view>
+  <view class="tip-bg">温馨提示：如果收货信息没有填写的话，就不算兑换成功呦</view>
+    <van-popup class="exchange-box" show="{{ exchangeShow }}" bind:close="onClose" close-on-click-overlay="{{false}}" catchtouchmove="true">
+			<image src="{{util.setImgUrl}}/assets/img/icon/popup-person.png" mode='aspectFill' alt="" class="person-img"></image>
+			<view class="popup-box">
+        <image src="{{util.setImgUrl}}/assets/img/icon/popup-floor.png" mode='aspectFill' alt="" class="img"></image>
+        <view class="title-text">是否确认兑换</view>
+        <view class="btn-box">
+            <image bindtap="onCloseFn" src="{{util.setImgUrl}}/assets/img/icon/cancel.png" mode='aspectFill' alt="" class="img-btn"></image>
+            <image bindtap="confirmFn" src="{{util.setImgUrl}}/assets/img/icon/affirm.png" mode='aspectFill' alt="" class="img-btn"></image>
+        </view>
+			</view>
+		</van-popup>
+   <van-popup
+    round
+    show="{{areaShow}}"
+    position="bottom"
+    custom-style="height: 42%;"
+    bind:close="onClose"
+     >
+    <van-area
+      area-list="{{ areaList }}"
+      value="{{countyCode}}"
+      title="选择地址"
+      columns-placeholder="{{ ['请选择', '请选择', '请选择'] }}"
+      bind:confirm="getArea"
+      bind:cancel="colseArea"
+      bind:change="showArea"
+    />
+  </van-popup>
+</view>
+
+
+ 

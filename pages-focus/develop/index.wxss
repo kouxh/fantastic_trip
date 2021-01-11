@@ -50,7 +50,6 @@ page {
   top: 770rpx;
   left: 96rpx;
   padding: 10rpx;
-
 }
 textarea {
   width: 100%;

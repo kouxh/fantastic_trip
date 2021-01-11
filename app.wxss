@@ -35,36 +35,10 @@ page {
 .IpX-Bottom {
   padding-bottom: 40rpx !important;
 }
-.loading{
+.img{
   width: 100%;
-  min-height: 100vh;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  padding-top: 50%;
-
-}
- .comment-box{
-  padding: 20rpx 32rpx 0;
-}
-
-.nomsg-img-box {
-  width: 100%;
- min-height: 70vh;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  padding-top: 50%;
-}
- .nomsg-img-box .nomsg-img {
-  width: 100%;
-  height: 200rpx;
-}
-.nomsg-img-box .tips-msg {
-  text-align: center;
-  margin-top: 40rpx;
-  color: #b2b2b2;
-  font-size: 24rpx;
+  height: 100%;
+  object-fit: cover;
 }
 
 

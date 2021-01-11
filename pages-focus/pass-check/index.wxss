@@ -30,7 +30,7 @@ page {
   color: #3a3a3a;
   position: absolute;
   top: 63%;
-  right: 178rpx;
+  right: 180rpx;
 
 }
 .next{

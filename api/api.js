@@ -40,6 +40,46 @@ export default {
   insertUserMessage(params) {
     return fetch.fetchGet("api/march/insert_user_message", params);
   },
+  /**
+   *用户添加反馈意见
+   * @param  {[type]} params [description]
+   * @return {[type]}        [description]
+   */
+  feedbackMessage(params) {
+    return fetch.fetchGet("api/march/feedback/insert_user_message", params);
+  },
+  /**
+   *商品列表
+   * @param  {[type]} params [description]
+   * @return {[type]}        [description]
+   */
+  goodsList(params) {
+    return fetch.fetchGet("api/march/goods/goods_list", params);
+  },
+  /**
+   *兑换接口
+   * @param  {[type]} params [description]
+   * @return {[type]}        [description]
+   */
+  goodsExchange(params) {
+    return fetch.fetchGet("api/march/goods/goods_exchange", params);
+  },
+  /**
+   *排行榜
+   * @param  {[type]} params [description]
+   * @return {[type]}        [description]
+   */
+  rankingList(params) {
+    return fetch.fetchGet("api/march/ranking_list", params);
+  },
+  /**
+   *兑换列表
+   * @param  {[type]} params [description]
+   * @return {[type]}        [description]
+   */
+  orderList(params) {
+    return fetch.fetchGet("api/march/order/order_exchange_list", params);
+  },
 
 }
 

@@ -120,11 +120,13 @@ function setStorage(key, value, app) {
     that.setData(json)
   }
 
+
 module.exports = {
   formatTime: formatTime,
   checkLogin:checkLogin,
   setStorage:setStorage,
   show:show,
   slideupshow:slideupshow,
-  sliderightshow:sliderightshow
+  sliderightshow:sliderightshow,
+
 }

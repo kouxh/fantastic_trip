@@ -1,0 +1,24 @@
+@import "../../pages/integral-list/index.wxss";
+.pages-integral-list-index{
+  background-color: #7bf4ff;
+   min-height: 100vh;
+}
+.back-btn{
+  width: 137rpx;
+	height: 56rpx;
+  margin-left: 30rpx;
+  padding-top: 30rpx;
+}
+.list-header{
+  width: 382rpx;
+  height: 139rpx;
+  margin-top: -20rpx;
+}
+.every-list{
+  background-image: url("https://march.yuanian.com/static/assets/img/icon/deal-floor.png") !important;
+}
+.index {
+  opacity: 0; 
+  transform: translateY(100px); 
+}
+
