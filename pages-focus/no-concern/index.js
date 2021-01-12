@@ -42,7 +42,7 @@ Page({
     })
     if(options.name=="抖音号"){
       that.data.typeName=options.name;
-      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-trill.png';
+      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-trill(1).png';
       that.data.circleColor='#ff62dc';
       that.data.classId=2;
       // that.setData({
@@ -53,7 +53,7 @@ Page({
       // })
     }else if(options.name=="头条号"){
       that.data.typeName=options.name;
-      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-headline.png';
+      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-headline(1).png';
       that.data.circleColor='#ff5e4d';
       that.data.classId=1;
       // that.setData({
@@ -64,7 +64,7 @@ Page({
       // })
     }else if(options.name=="知乎号"){
       that.data.typeName=options.name;
-      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-zhihu.png';
+      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-zhihu(1).png';
       that.data.circleColor='#16a5ff';
       that.data.classId=3;
       // that.setData({
@@ -75,7 +75,7 @@ Page({
       // })
     }else if(options.name=="视频号"){
       that.data.typeName=options.name;
-      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-video.png';
+      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-video(1).png';
       that.data.circleColor='#ff8519';
       that.data.classId=5;
       // that.setData({
@@ -86,7 +86,7 @@ Page({
       // })
     }else if(options.name=="喜马拉雅号"){
       that.data.typeName=options.name;
-      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-himalaya.png';
+      that.data.bottomImg='https://march.yuanian.com/static/assets/img/icon/focus-himalaya(1).png';
       that.data.circleColor='#eb3f3f';
       that.data.classId=4;
       // that.setData({

@@ -11,7 +11,7 @@
 				<van-loading type="spinner"/>
 			</view>
 			<view class="content-box" wx:if="{{listShowType==1}}">
-					<view class="every-list index" wx:for="{{getListArr}}" wx:key="index" animation="{{slide_up1}}" wx:if="item.gd_img !=''">
+					<view class="every-list index" wx:for="{{getListArr}}" wx:key="index" animation="{{slide_up1}}" wx:if="{{item.gd_img}}">
 						<view class="list-left">
 							<image mode='aspectFill' src='{{util.networkImgUrl}}{{item.gd_img}}' alt class="img" />
 						</view>

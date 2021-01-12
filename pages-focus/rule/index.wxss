@@ -23,11 +23,11 @@
 }
 .within-box{
   width: 512rpx;
-  height: 762rpx;
+  height: 780rpx;
 
 }
 .item{
-  margin-bottom: 50rpx;
+  margin-bottom: 40rpx;
 }
 .item-title,.item-title1{
   font-size: 25rpx;

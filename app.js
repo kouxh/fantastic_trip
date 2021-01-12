@@ -19,8 +19,8 @@ App({
     wx.getSystemInfo({
       success(res) {
         isWxWork = res.environment == 'wxwork';
+        console.log(isWxWork,'-----')
         if (!isWxWork) {
-          console.log(isWxWork,'-----')
             // 当前环境不是企业微信，怎么处理你随便
             wx.showToast({
               title: '请在企业微信中使用该小程序',

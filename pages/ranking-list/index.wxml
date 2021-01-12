@@ -26,12 +26,12 @@
         </view>
         <view class="value" wx:else>{{index+1}}</view>
         <view class="value">{{item.u_name}}</view>
-        <view class="value">{{item.u_real_integral}}</view>
+        <view class="value">{{item.all_integral}}</view>
       </view>
       <view class="oneself">
         <view class="value">{{oneselfData.rank}}</view>
-        <view class="value">{{oneselfData.u_name}}</view>
-        <view class="value">{{oneselfData.u_real_integral}}</view>
+        <view class="value">{{oneselfData.name}}</view>
+        <view class="value">{{oneselfData.all_integral}}</view>
       </view>
     </view>
   </view>
