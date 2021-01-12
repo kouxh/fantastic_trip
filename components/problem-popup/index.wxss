@@ -49,12 +49,14 @@ height: 626rpx;
 }
 .textArea-box{
   width: 482rpx;
-	height: 180rpx;
-	border-radius: 7rpx;
+	height: 170rpx;
+  border-radius: 7rpx;
+  border-top:solid 1rpx #404040;
   border: solid 1rpx #404040;
   padding: 20rpx;
   margin-left: 54rpx;
-  margin-top: 24rpx;
+  margin-top: 30rpx;
+  
 }
 .textarea {
   width: 100%;
