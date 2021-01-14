@@ -76,13 +76,16 @@
 }
 
 .tip {
-  font-size: 19rpx;
+  font-size: 20rpx;
   letter-spacing: 0rpx;
-  color: #caffa3;
+  color:#2b2828;
   position: absolute;
   top: 200rpx;
-  left: 100rpx;
+  left: 70rpx;
 
+}
+.bold{
+  font-weight: bold;
 }
 
 .close-box {

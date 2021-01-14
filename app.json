@@ -45,25 +45,25 @@
     "list": [
       {
         "pagePath": "pages/overall/index",
-        "iconPath": "assets/img/icon/overall.png",
+        "iconPath": "assets/img/icon/overall(1).png",
         "selectedIconPath": "assets/img/icon/overall.png",
         "text": "看全局"
       },
       {
         "pagePath": "pages/own/index",
-        "iconPath": "assets/img/icon/own.png",
+        "iconPath": "assets/img/icon/own(1).png",
         "selectedIconPath": "assets/img/icon/own.png",
         "text": "我的行军图"
       },
       {
         "pagePath": "pages/ranking-list/index",
-        "iconPath": "assets/img/icon/ranking.png",
+        "iconPath": "assets/img/icon/ranking(1).png",
         "selectedIconPath": "assets/img/icon/ranking.png",
         "text": "排行榜"
       },
       {
         "pagePath": "pages/integral-list/index",
-        "iconPath": "assets/img/icon/integral.png",
+        "iconPath": "assets/img/icon/integral(1).png",
         "selectedIconPath": "assets/img/icon/integral.png",
         "text": "积分兑礼"
       }

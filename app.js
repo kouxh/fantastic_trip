@@ -103,14 +103,14 @@ App({
     if (wx.canIUse('getUpdateManager')) {
       const updateManager = wx.getUpdateManager()
       updateManager.onCheckForUpdate(function (res) {
-        console.log(res.hasUpdate,'-----res.hasUpdate----')
+        console.log(res.hasUpdate,'-----更新版本res.hasUpdate----')
         if (res.hasUpdate) {
           updateManager.onUpdateReady(function () {
             wx.showModal({
               title: '更新提示',
               content: '新版本已经准备好，是否重启应用？',
               success: function (res) {
-                console.log(res.confirm,'res.confirm---------')
+                console.log(res.confirm,'点击确定res.confirm---------')
                 if (res.confirm) {
                   updateManager.applyUpdate()
                 }

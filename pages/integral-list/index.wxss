@@ -61,6 +61,7 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
+  position: relative;
 }
  .content-box .every-list .list-left {
   width: 180rpx;
@@ -95,6 +96,13 @@
   align-items: center;
   letter-spacing: 2rpx;
 
+}
+.limited{
+  position: absolute;
+  top: 10rpx;
+  right: 16rpx;
+  width: 90rpx;
+  height: 90rpx;
 }
 .icon-img{
   width: 22rpx;

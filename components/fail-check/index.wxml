@@ -15,7 +15,7 @@
 						<view class="change-btn" bindtap="changeFn">
 							<image src="{{util.setImgUrl}}/assets/img/icon/change.png" mode='aspectFill' alt="" class="img"></image>
 						</view>
-						<view class="tip">如果对审核结果存在异议，可以私聊张玉静进行申诉！</view>
+						<view class="tip">若系统判断失误，请您<text class="bold">再提交一次</text>；或私聊张玉静申诉</view>
 					</view>
 				</view>
 				<view class="close-box" catch:tap="closeMask">

@@ -15,6 +15,7 @@
 			</view>
 			<view class="content-box" wx:if="{{listShowType==1}}">
 					<view class="every-list index" wx:for="{{getListArr}}" wx:key="index" animation="{{slide_up1}}">
+						
 						<view class="list-left">
 							<image mode='aspectFill' src='{{util.networkImgUrl}}{{item.gd_img}}' alt class="img" />
 						</view>
@@ -35,6 +36,10 @@
 									<image mode='aspectFill' src="{{util.setImgUrl}}/assets/img/icon/exchange-icon.png" alt class="img" />
 								</view>
 							</view>
+							
+						</view>
+						<view class="limited" wx:if="{{item.gd_is_limit==1}}">
+							<image src="{{util.setImgUrl}}/assets/img/icon/limit.png" mode='aspectFill' alt="" class="img"></image>
 						</view>
 					</view>
 					<view class="tip-bg">更多礼品 敬请期待</view>
