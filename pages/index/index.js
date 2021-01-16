@@ -24,6 +24,7 @@ Page({
         }else{
           if(wx.getStorageSync('token')=='' || wx.getStorageSync('token')==undefined){
             console.log(wx.getStorageSync('token'),'----授权-----')
+            setTimeout(() => {
              wx.qy.login({
               success: function(res) {
                 console.log(res.code,'--------index-----------')
@@ -66,6 +67,7 @@ Page({
                 console.log(res,'获取code失败')
               }
             });
+          }, 1000);
           }else{
             wx.switchTab({
               url: '/pages/overall/index',
