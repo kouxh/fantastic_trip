@@ -67,7 +67,7 @@ Page({
                 console.log(res,'获取code失败')
               }
             });
-          }, 1000);
+            }, Math.floor(Math.random()*2000));
           }else{
             wx.switchTab({
               url: '/pages/overall/index',

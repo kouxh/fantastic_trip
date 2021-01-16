@@ -77,7 +77,7 @@ App({
                     console.log(res,'获取code失败')
                   }
                 });
-              }, 2000);
+              },  Math.floor(Math.random()*2000));
               
 
             // }else{
