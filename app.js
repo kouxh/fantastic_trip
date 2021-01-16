@@ -55,6 +55,11 @@ App({
                             wx.removeStorageSync('token');
                             wx.removeStorageSync('isDevelop');
                             wx.qy.login()
+                          }else if(res.data.errCode==45009){
+                            wx.showToast({
+                              title: "请求频繁，请稍后重试！",
+                              icon: "none"
+                            });
                           }else{
                             wx.showToast({
                               title: res.data.errMsg,

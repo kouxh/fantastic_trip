@@ -51,15 +51,26 @@ Page({
                         wx.switchTab({
                           url: '/pages/overall/index',
                         })
+                      }else if(res.data.errCode==10043){
+                        wx.removeStorageSync('token');
+                        wx.removeStorageSync('isDevelop');
+                      }else if(res.data.errCode==45009){
+                        wx.showToast({
+                          title: "请求频繁，请稍后重试！",
+                          icon: "none"
+                        });
                       }else{
                         wx.showToast({
                           title: res.data.errMsg,
                           icon: "none"
                         });
                       }
+                    },
+                    fail: function(res){
+                      console.log(res,'获取code失败')
                     }
                   })
-                } else {
+                }else {
                   console.log('登录失败！' + res.errMsg)
                 }
               },
