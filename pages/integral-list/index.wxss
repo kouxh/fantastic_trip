@@ -71,7 +71,7 @@
 }
 
  .content-box .every-list .list-right {
-  /* width: 300rpx; */
+  width: 320rpx;
   margin-left: 40rpx;
   flex-direction: column;
   display: flex;

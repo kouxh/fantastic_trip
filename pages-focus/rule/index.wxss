@@ -1,20 +1,20 @@
 .pages-rule-index{
   width: 100%;
   height: 100vh;
-  background-image: url("https://march.yuanian.com/static/assets/img/rule-bg.jpg");
-  background-size: 100% 100vh;
+  background-image: url("https://march.yuanian.com/static/assets/img/rule-bg(1).jpg");
+  background-size:100% 100vh;
   background-repeat: no-repeat;
 }
 .title{
   width: 360rpx;
   height: 110rpx;
-  margin: 20rpx auto;
+  margin: 0rpx auto;
 }
 .content-box{
-  width: 640rpx;
-	height: 900rpx;
-  background-image: url("https://march.yuanian.com/static/assets/img/rule-floor.png");
-  background-size:640rpx 900rpx;
+  width: 680rpx;
+	height: 1150rpx;
+  background-image: url("https://march.yuanian.com/static/assets/img/rule-floor(1).png");
+  background-size:680rpx 1150rpx;
   background-repeat: no-repeat;
   margin: 0 auto;
   display: flex;
@@ -22,15 +22,28 @@
   align-items: center;
 }
 .within-box{
-  width: 512rpx;
-  height: 780rpx;
+  width: 580rpx;
+  height: 1037rpx;
 
 }
+.color{
+  color: #df4e33;
+
+}
+.rule-form{
+  width: 590rpx;
+  height: 456rpx;
+  object-fit: cover;
+  margin-top: 10rpx;
+}
+.size{
+  font-size:25rpx;
+}
 .item{
-  margin-bottom: 40rpx;
+  margin-bottom: 30rpx;
 }
 .item-title,.item-title1{
-  font-size: 25rpx;
+  font-size: 26rpx;
 	line-height: 26rpx;
 	letter-spacing: 0rpx;
   color: #df4e33;

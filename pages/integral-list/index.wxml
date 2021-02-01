@@ -20,7 +20,7 @@
 							<image mode='aspectFill' src='{{util.networkImgUrl}}{{item.gd_img}}' alt class="img" />
 						</view>
 						<view class="list-right">
-							<view class="right-up ellipsis2row">{{item.gd_name}}</view>
+							<view class="right-up ellipsis1row">{{item.gd_name}}</view>
 							<view class="right-bottom">
 								<view class="left">
 									<image mode='aspectFill' src="{{util.setImgUrl}}/assets/img/icon/integral-icon.png" alt class="icon-img" />
