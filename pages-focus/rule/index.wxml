@@ -10,21 +10,21 @@
     <view class="within-box">
       <view class="item">
         <view class="item-title1">（一）积分获取渠道</view>
-        <text class="color size">小程序内:</text>
+        <view class="color size">小程序内:</view>
         <view class="text"><icon class="icon">1/</icon> 每闯过一关，可获得<text class="color">20积分</text>，通关共计100积分</view>
         <view class="text"><icon class="icon">2/</icon> 提出的<text class="color">意见或者建议</text>被采纳，可获得相应积分</view>
-        <text class="color size">小程序外：</text>
+        <view class="color size">小程序外：</view>
         <view class="text"><icon class="icon">1/</icon> 参与公司<text class="color">指定内容</text>的互动活动，可获得积分，具体如下表</view>
         <view class="rule-form">
-          <image src="{{util.setImgUrl}}/assets/img/form.png" mode='aspectFill' alt="" class="img"></image>
+          <image src="{{util.setImgUrl}}/assets/img/form(1).png" mode='aspectFill' alt="" class="img"></image>
         </view>
         <view class="text"><icon class="icon">2/</icon> 积极参与公司的<text class="color">其他活动</text>，可获得相应积分，如：保卫元年大行动，为元年点赞活动等</view>
-        <view class="text"><icon class="icon">3/</icon>  在公司各种活动中<text class="color">积极发言、互动</text>等，可获得相应积分</view>
+        <view class="text"><icon class="icon">3/</icon>  在公司各种活动中<text class="color">积极发言、互动</text>等，有机会获得积分</view>
       </view>
       <view class="item">
         <view class="item-title">（二）积分排行与奖励</view>
-        <text class="text">在规定的排名周期内，总积分前十名会出现在排行榜中</text>
-        <text class="text">在每个指定的周期内，总积分前三名将获得指定的奖励</text>
+        <view class="text"><icon class="icon">1/</icon> 在规定的排名周期内，总积分前十名会出现在排行榜中</view>
+        <view class="text"><icon class="icon">2/</icon> 在每个指定的周期内，总积分前三名将获得指定的奖励</view>
       </view>
     </view>
   </view>
