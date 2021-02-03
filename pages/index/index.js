@@ -6,6 +6,7 @@ Page({
   data: {
     code:'',
     isDoudong: true, //控制图片抖动
+    isclick:true,//防重点击
   },
   jumpFn:function(){
     let that=this;
@@ -14,7 +15,6 @@ Page({
       success(res) {
         isWxWork = res.environment == 'wxwork';
         if (!isWxWork) {
-          console.log(isWxWork,'-----')
             // 当前环境不是企业微信，怎么处理你随便
             wx.showToast({
               title: '请在企业微信中使用该小程序',
@@ -22,65 +22,76 @@ Page({
             })
             return;
         }else{
-          if(wx.getStorageSync('token')=='' || wx.getStorageSync('token')==undefined){
+          if(wx.getStorageSync('token')=='' ||wx.getStorageSync('token')==undefined){
             console.log(wx.getStorageSync('token'),'----授权-----')
-            setTimeout(() => {
-             wx.qy.login({
-              success: function(res) {
-                console.log(res.code,'--------index-----------')
-                if (res.code) {
-                  wx.showLoading({
-                    title: "登录中...",
-                    mask: true
-                  });
-                // 发起网络请求
-                  wx.request({
-                    url: 'https://march.yuanian.com/api/march/login',
-                    data: {
-                      code: res.code
-                    },
-                    success:function(res){
-                      if(res.data.errCode==200){
-                        wx.showToast({
-                          title: '登录成功',
-                          icon: 'success',
-                          duration: 2000
-                        });
-                        wx.setStorageSync('token', res.data.data.custom_token)
-                        wx.hideLoading();
-                        wx.switchTab({
-                          url: '/pages/overall/index',
-                        })
-                      }else if(res.data.errCode==10043){
-                        wx.removeStorageSync('token');
-                        wx.removeStorageSync('isDevelop');
-                        wx.qy.login()
-                      }else if(res.data.errCode==45009){
-                        wx.showToast({
-                          title: "请求频繁，请稍后重试！",
-                          icon: "none"
-                        });
-                        wx.hideLoading();
-                      }else{
-                        wx.showToast({
-                          title: res.data.errMsg,
-                          icon: "none"
-                        });
-                      }
-                    },
-                    fail: function(res){
-                      console.log(res,'获取code失败')
+            // setTimeout(() => {
+              if(that.data.isclick){
+                that.setData({
+                  isclick:false
+                })
+                wx.qy.login({
+                  success: function(res) {
+                    console.log(res.code,'--------index-----------')
+                    if (res.code) {
+                      wx.showLoading({
+                        title: "登录中...",
+                        mask: true
+                      });
+                    // 发起网络请求
+                      wx.request({
+                        url: 'https://march.yuanian.com/api/march/login',
+                        data: {
+                          code: res.code
+                        },
+                        success:function(res){
+                          if(res.data.errCode==200){
+                            wx.showToast({
+                              title: '登录成功',
+                              icon: 'success',
+                              duration: 2000
+                            });
+                            wx.setStorageSync('token', res.data.data.custom_token)
+                            wx.hideLoading();
+                            wx.switchTab({
+                              url: '/pages/overall/index',
+                            })
+                          }else if(res.data.errCode==10043){
+                            wx.removeStorageSync('token');
+                            wx.removeStorageSync('isDevelop');
+                            wx.qy.login()
+                          }else if(res.data.errCode==45009){
+                            wx.showToast({
+                              title: "请求频繁，请稍后重试！",
+                              icon: "none"
+                            });
+                            wx.hideLoading();
+                          }else{
+                            wx.showToast({
+                              title: res.data.errMsg,
+                              icon: "none"
+                            });
+                          }
+                        },
+                        fail: function(res){
+                          console.log(res,'获取code失败')
+                        }
+                      })
+                    }else {
+                      console.log('登录失败！' + res.errMsg)
                     }
+                  },
+                  fail: function(res){
+                    console.log(res,'获取code失败')
+                  }
+                });
+                setTimeout(function(){ 
+                  that.setData({
+                    isclick:true
                   })
-                }else {
-                  console.log('登录失败！' + res.errMsg)
-                }
-              },
-              fail: function(res){
-                console.log(res,'获取code失败')
-              }
-            });
-            }, Math.floor(Math.random()*2000));
+                }, 500);
+                
+            }
+            // }, Math.floor(Math.random()*2000));
           }else{
             wx.switchTab({
               url: '/pages/overall/index',
